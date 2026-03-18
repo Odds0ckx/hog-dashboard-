@@ -567,6 +567,80 @@ input,select,textarea{font-family:inherit;}
   .src-row{flex-wrap:wrap;}
   .ph-title{font-size:20px;}
 }
+
+/* ── LIST PAGES (Requests / Deals) ── */
+.list-filters{margin:14px 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.list-filter-chips{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.list-filter-lbl{font-size:12px;font-weight:600;color:var(--hog-text-muted);}
+.lf-chip{padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;border:1.5px solid var(--hog-warm-border);background:#fff;color:var(--hog-text);cursor:pointer;transition:all .12s;touch-action:manipulation;}
+.lf-chip:hover{border-color:var(--hog-coral);}
+.lf-chip.lf-active{background:var(--hog-coral);border-color:#0f0f0d;color:#fff;box-shadow:2px 2px 0 #0f0f0d;}
+.list-table-wrap{overflow-x:auto;margin-top:6px;border-radius:10px;border:1.5px solid var(--hog-warm-border);}
+.list-table{width:100%;border-collapse:collapse;font-size:13px;}
+.list-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--hog-text-muted);border-bottom:2px solid var(--hog-cream-dark);background:var(--hog-cream);font-family:'Syne',system-ui,sans-serif;}
+.list-table td{padding:11px 12px;border-bottom:1px solid var(--hog-cream-dark);color:var(--hog-text);vertical-align:middle;}
+.list-table tr:last-child td{border-bottom:none;}
+.list-table tbody tr:hover td{background:var(--hog-cream);}
+
+/* Status badges */
+.status-badge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:6px;font-size:11px;font-weight:700;font-family:'Syne',system-ui,sans-serif;white-space:nowrap;}
+.status-pending{background:#fef9c3;color:#854d0e;border:1.5px solid #fde047;}
+.status-outreach{background:var(--hog-coral-pale);color:var(--hog-coral-dark);border:1.5px solid var(--hog-coral-light);}
+.status-group{background:#e0f2fe;color:#0369a1;border:1.5px solid #7dd3fc;}
+.status-discuss{background:#f3e8ff;color:#7e22ce;border:1.5px solid #d8b4fe;}
+.status-approved{background:var(--hog-green-bg);color:#15803d;border:1.5px solid #86efac;}
+.status-declined{background:#fef2f2;color:#dc2626;border:1.5px solid #fca5a5;}
+.status-expired{background:var(--hog-cream-dark);color:var(--hog-text-muted);border:1.5px solid var(--hog-warm-border);}
+
+/* Detail pages */
+.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:16px;padding:14px;border-radius:10px;border:1.5px solid var(--hog-cream-dark);background:var(--hog-cream);}
+.detail-meta-row{display:flex;flex-direction:column;gap:2px;}
+.dm-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--hog-coral-dark);font-family:'Syne',system-ui,sans-serif;}
+.dm-val{font-size:13px;font-weight:600;color:var(--hog-dark);}
+.detail-section{margin-bottom:16px;}
+.detail-section-title{font-size:13px;font-weight:700;color:var(--hog-dark);margin-bottom:8px;font-family:'Syne',system-ui,sans-serif;}
+.detail-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.activity-log{display:flex;flex-direction:column;gap:6px;}
+.activity-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:var(--hog-cream);border:1px solid var(--hog-cream-dark);}
+.activity-date{font-size:11px;font-weight:700;color:var(--hog-text-muted);min-width:50px;}
+.activity-text{font-size:13px;color:var(--hog-text);}
+.scope-tag{display:inline-flex;padding:3px 10px;border-radius:6px;background:var(--hog-green-bg);color:#15803d;border:1.5px solid #86efac;font-size:12px;font-weight:600;}
+
+/* Contact section */
+.contact-section{display:flex;flex-direction:column;gap:4px;}
+.contact-section-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--hog-coral-dark);margin-bottom:4px;margin-top:10px;font-family:'Syne',system-ui,sans-serif;}
+
+/* Affiliate card request badge */
+.ch-req-badge{font-size:11px;font-weight:600;color:var(--hog-text-muted);background:var(--hog-cream-dark);border-radius:6px;padding:2px 7px;}
+
+@media(max-width:639px){
+  .detail-meta{grid-template-columns:1fr;}
+  .detail-grid3{grid-template-columns:1fr 1fr;}
+  .list-table{font-size:12px;}
+  .list-table th,.list-table td{padding:8px 8px;}
+}
+
+/* ── DASHBOARD ── */
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px;}
+@media(min-width:900px){.dash-stats{grid-template-columns:repeat(6,1fr);}}
+.dash-stat{display:flex;align-items:center;gap:10px;padding:14px 12px;border-radius:10px;background:#fff;border:1.5px solid var(--hog-warm-border);}
+.dash-stat-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dash-stat-icon svg{width:20px;height:20px;}
+.dash-stat-val{font-size:20px;font-weight:700;color:var(--hog-dark);font-family:'Syne',system-ui,sans-serif;line-height:1;}
+.dash-stat-lbl{font-size:11px;color:var(--hog-text-muted);margin-top:3px;}
+.dash-two-col{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px;}
+@media(min-width:820px){.dash-two-col{grid-template-columns:1fr 1fr;}}
+.dash-card{background:#fff;border-radius:12px;border:1.5px solid var(--hog-warm-border);padding:16px;overflow:hidden;}
+.dash-card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.dash-card-title{font-size:14px;font-weight:700;color:var(--hog-dark);font-family:'Syne',system-ui,sans-serif;}
+.dash-card-link{font-size:12px;font-weight:600;color:var(--hog-coral-dark);cursor:pointer;transition:color .12s;}
+.dash-card-link:hover{color:var(--hog-coral);}
+.dash-aff-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--hog-cream-dark);}
+.dash-aff-row:last-child{border-bottom:none;}
+@media(max-width:639px){
+  .dash-stats{grid-template-columns:repeat(2,1fr);}
+  .dash-two-col{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -600,6 +674,8 @@ input,select,textarea{font-family:inherit;}
       <ul class="sb-sub">
         <li><button class="sb-link" onclick="nav('streamers')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>Browse Streamers</button></li>
         <li><button class="sb-link active" id="sb-affiliates" onclick="nav('affiliates')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>Affiliates<span class="sb-badge">1</span></button></li>
+        <li><button class="sb-link" id="sb-requests" onclick="nav('requests')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"/></svg>Requests<span class="sb-badge">5</span></button></li>
+        <li><button class="sb-link" id="sb-deals" onclick="nav('deals')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 0 1 21.75 8.25Z"/></svg>Deals</button></li>
       </ul>
     </li>
     <li class="sb-group">
@@ -754,69 +830,99 @@ input,select,textarea{font-family:inherit;}
   <div class="panel-body" id="panelBody"></div>
 </div>
 
-<script>
+
+
+<!-- MOBILE HAMBURGER + OVERLAY -->
+
+<div class="mob-overlay" id="mobOverlay" onclick="closeMobMenu()"></div>
+
+<!-- Manage Affiliate Modal -->
+<div class="modal-bg" id="modalManage">
+  <div class="modal wide" style="max-width:580px;">
+    <div class="modal-hd">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="modal-title" id="manageAffName">Manage Affiliate</span>
+      </div>
+      <button class="modal-close" onclick="closeModal('modalManage')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+    <!-- Manage Tabs -->
+    <div class="panel-tabs" id="manageTabs" style="background:#fff;">
+      <button class="ptab active" onclick="switchManageTab('details')">Details</button>
+      <button class="ptab" onclick="switchManageTab('contacts')">Contacts</button>
+    </div>
+    <div class="modal-body" id="manageBody" style="min-height:260px;"></div>
+    <div class="modal-foot">
+      <button class="btn-cancel" onclick="closeModal('modalManage')">Cancel</button>
+      <button class="btn-submit" onclick="saveManage()">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html><script>
+
+
 // ═══ DATA ═══
 const AFFILIATES = [
   {
     id:'gig', name:'Gaming Innovation Group (GIG)', initials:'G',
     updated:'16 Mar', active:true,
+    requests:4,
     sources:{ seo:2, ppc:1, email:1 },
-    geos:['🇩🇪','🇨🇭','🇨🇦','🇬🇧','🇦🇺'],
+    topGeos:['🇩🇪','🇫🇮','🇨🇦'],
+    coverageGeos:['🇩🇪','🇫🇮','🇨🇦','🇬🇧','🇳🇿'],
     seoSites:[
-      {name:'askgamblers.com', geos:['🇩🇪','🇨🇭','🇨🇦'], key:'askgamblers'},
-      {name:'casinotopsonline.com', geos:['🇬🇧','🇨🇦','🇦🇺'], key:'casinotops'}
+      {name:'askgamblers.com', geos:['🇩🇪','🇫🇮','🇨🇦'], key:'askgamblers'},
+      {name:'casinotopsonline.com', geos:['🇬🇧','🇨🇦','🇳🇿'], key:'casinotops'}
     ],
     channels:[
       {type:'PPC', count:1, geos:['🇩🇪','🇬🇧','🇨🇦'], key:'googleppc'},
-      {type:'Email', count:1, geos:['🇨🇭','🇨🇦'], key:'emaillist'}
+      {type:'Email', count:1, geos:['🇫🇮','🇨🇦'], key:'emaillist'}
     ],
-    perf:{ ftds:'2,600', ltv:'$305', value:'$793K', ltvChg:'NGR +5.0%', valueChg:'↑ 9%' },
+    perf:{ ftds:'2,600', ltv:'$305', value:'$793K', valueChg:'+9%' },
     deals:{ count:3, active:true, seo:1, ppc:1, email:1 },
-    verticals:['CASINO','SPORTS'],
-    affDetails:{
-      badge:'Completed',
-      sources:[{type:'Casino Review Sites', count:1, sites:['TESTAFFSITE']}],
-      pendingDeals:[{type:'Casino Review Sites', site:'TESTAFFSITE', deal:'CPA', date:'17/03/2026'}]
-    }
+    verticals:['CASINO','SPORTS']
   },
   {
     id:'testaff1', name:'TestAff1', initials:'T',
-    updated:null, active:false,
+    updated:null, active:false, requests:0,
     sources:{ seo:1, ppc:0, email:0 },
-    geos:['🇬🇧','🇩🇪'],
+    topGeos:['🇬🇧','🇩🇪'],
+    coverageGeos:['🇬🇧','🇩🇪'],
     seoSites:[{name:'TESTAFFSITE', geos:['🇬🇧','🇩🇪'], key:'testaffsite'}],
     channels:[],
     perf:null,
     deals:{ count:0, active:false },
-    verticals:['CASINO','SPORTS'],
-    affDetails:{
-      badge:'Completed',
-      sources:[{type:'Casino Review Sites', count:1, sites:['TESTAFFSITE']}],
-      pendingDeals:[{type:'Casino Review Sites', site:'TESTAFFSITE', deal:'CPA', date:'17/03/2026'}]
-    }
+    verticals:['CASINO']
   }
 ];
 
 const SOURCES = {
   askgamblers:{
     type:'seo', badge:'SEO Review Website', title:'askgamblers.com',
-    basic:{domain:'askgamblers.com',vertical:'Casino',sourceType:'SEO Review Website',geos:['🇩🇪','🇨🇭','🇨🇦'],authority:72,refresh:'16 Mar 2026',desc:'Leading casino review website comparing bonuses and casinos globally.'},
-    traffic:{ftds:1420,ftdChg:'+7.6%',ltv:315,ltvChg:'+5.0%',value:'$447,300',valueChg:'+13.0%',visits:'2,820,000',conv:'2.1%',topGeos:[['🇬🇧','United Kingdom',22],['🇩🇪','Germany',20],['🇨🇦','Canada',17],['🇺🇸','United States',7],['🇨🇾','Cyprus',6],['🇳🇿','New Zealand',4],['🇦🇹','Austria',3],['🇮🇳','India',2],['🇦🇺','Australia',2],['🇫🇮','Finland',1]],similar:['casino.guru','gambling.com','tribuna.com']},
-    geo:{table:[['🇩🇪','Germany',32,902400,454,320,'$145K'],['🇫🇮','Finland',18,507600,255,310,'$79K'],['🇨🇦','Canada',14,394800,199,340,'$67K'],['🇸🇪','Sweden',10,282000,142,300,'$42K'],['🇺🇸','United States',7,197400,99,290,'$28K'],['🇨🇾','Cyprus',6,169200,85,305,'$25K']]},
+    basic:{domain:'askgamblers.com',vertical:'Casino',sourceType:'SEO Review Website',geos:['🇩🇪','🇫🇮','🇨🇦'],authority:72,refresh:'16 Mar 2026',desc:'Leading casino review website comparing bonuses and casinos globally.'},
+    traffic:{ftds:1420,ftdChg:'+7.6%',ltv:315,ltvChg:'+5.0%',value:'$447,300',valueChg:'+13.0%',visits:'2,820,000',conv:'2.1%',
+      topGeos:[['🇬🇧','United Kingdom',22],['🇩🇪','Germany',20],['🇨🇦','Canada',17],['🇺🇸','United States',7],['🇨🇾','Cyprus',6],['🇳🇿','New Zealand',4],['🇦🇹','Austria',3],['🇮🇳','India',2],['🇦🇺','Australia',2],['🇫🇮','Finland',1]],
+      similar:[{name:'casino.guru',note:'Higher authority'},{name:'gambling.com',note:'Similar GEO mix'},{name:'tribuna.com',note:'Lower volume'}]},
+    geo:{table:[['🇩🇪','Germany',32,902400,454,320,'$145K'],['🇫🇮','Finland',18,507600,255,310,'$79K'],['🇨🇦','Canada',14,394800,199,340,'$67K'],['🇸🇪','Sweden',10,282000,142,300,'$42K'],['🇺🇸','USA',7,197400,99,290,'$28K'],['🇨🇾','Cyprus',6,169200,85,305,'$25K']]},
     brand:{rankings:[['Stake',12],['LeoVegas',9],['BC.Game',7],['Roobet',6],['Rollbit',5],['Bet365',4],['1xBet',4],['BitStarz',3],['Wildz',3],['GG.Bet',2]],detail:{brand:'Stake',geo:'Germany',pages:[{url:'/best-online-casinos',pos:'#1'},{url:'/crypto-casinos',pos:'#2'},{url:'/new-online-casinos',pos:'#3'}]}},
     page:{rows:[['/best-online-casinos',['CASINO','TRANSACTIONAL'],320,'$102K','16 Mar'],['/crypto-casinos',['CASINO','CRYPTO'],210,'$71K','16 Mar'],['/new-online-casinos',['CASINO','NEW'],160,'$52K','15 Mar'],['/casino-bonuses',['CASINO','BONUS'],140,'$45K','16 Mar'],['/no-deposit-casinos',['CASINO','BONUS'],120,'$38K','15 Mar'],['/mobile-casinos',['CASINO','REVIEW'],95,'$30K','14 Mar'],['/live-casino-sites',['CASINO','LIVE'],80,'$25K','14 Mar']]},
     compliance:{brands:[['Stake',18,'#2.1'],['LeoVegas',12,'#3.4'],['BC.Game',9,'#4.2'],['Roobet',7,'#5.1'],['Rollbit',6,'#6.0'],['Bet365',5,'#6.8']],detail:{brand:'Stake',geo:'Germany',pages:[{url:'/best-online-casinos',pos:'#1',bonus:'200% + 200 FS',cta:'Play Now',terms:'Present'},{url:'/crypto-casinos',pos:'#2',bonus:'100% up to 1 BTC',cta:'Get Bonus',terms:'Missing'},{url:'/casino-bonuses',pos:'#4',bonus:'—',cta:'—',terms:'Present'}]}},
-    deals:[['#1042','CLIENTBRAND','CPA','Active'],['#1018','Stake','RevShare','Active'],['#0992','BC.Game','Hybrid','Completed']]
+    deals:[['#1042','CLIENTBRAND','CPA','Active'],['#1018','Stake','RevShare','Active'],['#0992','BC.Game','Hybrid','Completed']],
+    contact:{affiliate:[{name:'John Smith',role:'Affiliate Manager',email:'john@gig.com',tg:'@john'},{name:'Sarah Lee',role:'Finance',email:'finance@gig.com',tg:'—'}],source:[{name:'Mark Evans',role:'SEO Manager',email:'mark@askgamblers.com',tg:'@mark'}],brand:[{name:'Alex Brown',role:'Account Manager',email:'alex@client.com',tg:'@alex'}],notes:'GIG prefers rev share deals. Slow response weekends.'}
   },
   casinotops:{
     type:'seo', badge:'SEO Review Website', title:'casinotopsonline.com',
-    basic:{domain:'casinotopsonline.com',vertical:'Casino',sourceType:'SEO Review Website',geos:['🇬🇧','🇨🇦','🇦🇺'],authority:58,refresh:'15 Mar 2026',desc:'Global casino comparison site focusing on English-speaking markets.'},
-    traffic:{ftds:820,ftdChg:'+3.2%',ltv:290,ltvChg:'+2.1%',value:'$237,800',valueChg:'+5.4%',visits:'1,540,000',conv:'1.8%',topGeos:[['🇬🇧','United Kingdom',38],['🇨🇦','Canada',24],['🇦🇺','Australia',18],['🇳🇿','New Zealand',8],['🇮🇪','Ireland',5],['🇺🇸','United States',4]],similar:['casino.org','onlinegambling.ca']},
+    basic:{domain:'casinotopsonline.com',vertical:'Casino',sourceType:'SEO Review Website',geos:['🇬🇧','🇨🇦','🇳🇿'],authority:58,refresh:'15 Mar 2026',desc:'Global casino comparison site focusing on English-speaking markets.'},
+    traffic:{ftds:820,ftdChg:'+3.2%',ltv:290,ltvChg:'+2.1%',value:'$237,800',valueChg:'+5.4%',visits:'1,540,000',conv:'1.8%',
+      topGeos:[['🇬🇧','United Kingdom',38],['🇨🇦','Canada',24],['🇦🇺','Australia',18],['🇳🇿','New Zealand',8],['🇮🇪','Ireland',5],['🇺🇸','United States',4]],
+      similar:[{name:'casino.org',note:'Similar authority'},{name:'onlinegambling.ca',note:'CA focused'}]},
     geo:{table:[['🇬🇧','United Kingdom',38,585200,312,295,'$92K'],['🇨🇦','Canada',24,369600,197,310,'$61K'],['🇦🇺','Australia',18,277200,148,280,'$41K'],['🇳🇿','New Zealand',8,123200,66,305,'$20K'],['🇮🇪','Ireland',5,77000,41,285,'$11K']]},
     brand:{rankings:[['LeoVegas',8],['Casumo',6],['Rizk',5],['888 Casino',4],['Betway',3]],detail:{brand:'LeoVegas',geo:'United Kingdom',pages:[{url:'/best-uk-casinos',pos:'#1'},{url:'/mobile-casinos',pos:'#2'}]}},
     page:{rows:[['/best-uk-casinos',['CASINO','TRANSACTIONAL'],195,'$57K','15 Mar'],['/mobile-casinos',['CASINO','REVIEW'],140,'$41K','15 Mar'],['/new-casinos',['CASINO','NEW'],98,'$28K','14 Mar']]},
     compliance:{brands:[['LeoVegas',8,'#2.3'],['Casumo',6,'#3.1'],['Rizk',5,'#4.8']],detail:{brand:'LeoVegas',geo:'United Kingdom',pages:[{url:'/best-uk-casinos',pos:'#1',bonus:'Up to £100',cta:'Join Now',terms:'Present'},{url:'/mobile-casinos',pos:'#2',bonus:'Free Spins',cta:'Get Bonus',terms:'Present'}]}},
-    deals:[['#1033','CLIENTBRAND','RevShare','Active']]
+    deals:[['#1033','CLIENTBRAND','RevShare','Active']],
+    contact:{affiliate:[{name:'John Smith',role:'Affiliate Manager',email:'john@gig.com',tg:'@john'}],source:[{name:'Anna Price',role:'Partnerships',email:'anna@casinotops.com',tg:'@anna'}],brand:[{name:'Alex Brown',role:'Account Manager',email:'alex@client.com',tg:'@alex'}],notes:''}
   },
   testaffsite:{
     type:'seo', badge:'SEO Review Website', title:'TESTAFFSITE',
@@ -831,14 +937,57 @@ const SOURCES = {
   },
   emaillist:{
     type:'email', badge:'Email', title:'Email List',
-    basic:{sourceName:'GIG Email List',sourceType:'Email Marketing',parent:'Gaming Innovation Group',status:'Active',geos:['🇨🇭','🇨🇦'],lastUpdated:'16 Mar 2026',desc:'Opted-in subscriber list targeting European markets.'},
+    basic:{sourceName:'GIG Email List',sourceType:'Email Marketing',parent:'Gaming Innovation Group',status:'Active',geos:['🇫🇮','🇨🇦'],lastUpdated:'16 Mar 2026',desc:'Opted-in subscriber list targeting European markets.'},
     deals:[['#0999','CLIENTBRAND','CPA','Active']],
     contact:{name:'—',method:'Email',notes:'—'}
   }
 };
 
+const REQUESTS = [
+  {id:'REQ-001',affiliate:'GIG',geos:['🇩🇪','🇫🇮'],type:'SEO',sources:['askgamblers.com'],status:'Outreach Started',created:'14 Mar',updated:'1d ago',
+   notes:'Looking to test SEO and PPC in DE and FI.',relationship:{type:'New',comm:'New Group',group:'Pending'},
+   activity:[{date:'14 Mar',text:'Request created'},{date:'14 Mar',text:'Status → Pending Review'},{date:'15 Mar',text:'Status → Outreach Started'}]},
+  {id:'REQ-002',affiliate:'GIG',geos:['🇩🇪'],type:'Mixed',sources:[],status:'In Discussion',created:'12 Mar',updated:'3h ago',
+   notes:'Interested in mixed approach for Germany.',relationship:{type:'Existing',comm:'Existing Group',group:'Active'},activity:[]},
+  {id:'REQ-003',affiliate:'Catena',geos:['🇫🇮','🇨🇦'],type:'SEO',sources:['casino.guru'],status:'Approved',created:'10 Mar',updated:'2d ago',
+   notes:'Casino.guru partnership for FI and CA.',relationship:{type:'New',comm:'New Group',group:'Active'},activity:[]},
+  {id:'REQ-004',affiliate:'Raketech',geos:['🇨🇦'],type:'PPC',sources:[],status:'Declined',created:'08 Mar',updated:'5d ago',
+   notes:'',relationship:{type:'New',comm:'Private',group:'Not Required'},activity:[]},
+  {id:'REQ-005',affiliate:'GIG',geos:['🇬🇧','🇳🇿'],type:'SEO',sources:['askgamblers.com','casinotopsonline.com'],status:'Expired',created:'01 Mar',updated:'10d ago',
+   notes:'UK and NZ SEO trial.',relationship:{type:'Existing',comm:'Existing Group',group:'Active'},activity:[]}
+];
+
+const DEALS = [
+  {id:'DEAL-001',affiliate:'GIG',geos:['🇩🇪','🇫🇮'],type:'Mixed',sources:['askgamblers.com','casinotopsonline.com'],status:'Active',start:'01 Apr',updated:'1d ago',
+   brand:'CLIENTBRAND',request:'REQ-001',created:'14 Mar',
+   summary:{dealType:'Mixed',endDate:'—'},scope:{geos:['Germany','Finland'],channels:['SEO','PPC']},
+   commercials:[{source:'askgamblers.com',start:'01 Apr',cpa:'—',rev:'30%',listing:'$5,000',flat:'—'},{source:'casinotopsonline.com',start:'05 Apr',cpa:'$120',rev:'—',listing:'—',flat:'$3,000'}],
+   notes:'Deal agreed directly between brand and affiliate.'},
+  {id:'DEAL-002',affiliate:'GIG',geos:['🇩🇪'],type:'SEO',sources:['askgamblers.com'],status:'Active',start:'05 Apr',updated:'3h ago',
+   brand:'CLIENTBRAND',request:'REQ-002',created:'12 Mar',
+   summary:{dealType:'SEO',endDate:'—'},scope:{geos:['Germany'],channels:['SEO']},
+   commercials:[{source:'askgamblers.com',start:'05 Apr',cpa:'$150',rev:'—',listing:'—',flat:'—'}],
+   notes:''},
+  {id:'DEAL-003',affiliate:'Catena',geos:['🇫🇮','🇨🇦'],type:'SEO',sources:['casino.guru'],status:'Completed',start:'10 Mar',updated:'2d ago',
+   brand:'CLIENTBRAND',request:'REQ-003',created:'10 Mar',
+   summary:{dealType:'SEO',endDate:'10 Mar'},scope:{geos:['Finland','Canada'],channels:['SEO']},
+   commercials:[{source:'casino.guru',start:'10 Mar',cpa:'$80',rev:'—',listing:'—',flat:'—'}],
+   notes:'Completed trial.'},
+  {id:'DEAL-004',affiliate:'Raketech',geos:['🇨🇦'],type:'PPC',sources:[],status:'Cancelled',start:'—',updated:'5d ago',
+   brand:'CLIENTBRAND',request:'REQ-004',created:'08 Mar',
+   summary:{dealType:'PPC',endDate:'—'},scope:{geos:['Canada'],channels:['PPC']},
+   commercials:[],notes:'Cancelled before activation.'},
+  {id:'DEAL-005',affiliate:'GIG',geos:['🇬🇧','🇳🇿'],type:'SEO',sources:['askgamblers.com','casinotopsonline.com'],status:'Planned',start:'—',updated:'10d ago',
+   brand:'CLIENTBRAND',request:'REQ-005',created:'01 Mar',
+   summary:{dealType:'SEO',endDate:'—'},scope:{geos:['United Kingdom','New Zealand'],channels:['SEO']},
+   commercials:[{source:'askgamblers.com',start:'—',cpa:'—',rev:'25%',listing:'—',flat:'—'},{source:'casinotopsonline.com',start:'—',cpa:'—',rev:'20%',listing:'—',flat:'—'}],
+   notes:'Planned pending contract.'}
+];
+
 // ═══ FILTER STATE ═══
 let filterState = { intro:'Introduced affiliates', deals:'All deals', vertical:'All verticals', geo:'All GEOs' };
+let requestFilter = 'All Status';
+let dealFilter = 'All Status';
 let openDD = null;
 
 // ═══ NAV ═══
@@ -846,18 +995,21 @@ function nav(page){ closeMobMenu(); closePanel(); renderPage(page); }
 function renderPage(page){
   updateSidebar(page);
   const pc = document.getElementById('pageContent');
+  if(!pc) return;
   if(page==='affiliates') pc.innerHTML = buildAffiliatePage();
-  else if(page==='dashboard') pc.innerHTML = buildSimplePage('Dashboard','Overview of platform activity and key metrics');
-  else if(page==='streamers') pc.innerHTML = buildSimplePage('Browse Streamers','Connect with streamers for your campaigns');
-  else if(page==='bookings') pc.innerHTML = buildSimplePage('Bookings','Manage your bookings');
-  else if(page==='disputes') pc.innerHTML = buildSimplePage('Disputes','View and manage disputes you submitted and see how they were resolved');
-  else if(page==='campaigns') pc.innerHTML = buildSimplePage('Campaign Tools','Manage your campaign assets and resources');
+  else if(page==='requests') pc.innerHTML = buildRequestsPage();
+  else if(page==='deals') pc.innerHTML = buildDealsPage();
+  else if(page==='dashboard') pc.innerHTML = buildDashboardPage();
+  else if(page==='streamers') pc.innerHTML = buildStreamersPage();
+  else if(page==='bookings') pc.innerHTML = buildBookingsPage();
+  else if(page==='disputes') pc.innerHTML = buildDisputesPage();
+  else if(page==='campaigns') pc.innerHTML = buildCampaignsPage();
   attachDropdowns();
   closeAllDropdowns();
 }
 function updateSidebar(page){
   document.querySelectorAll('.sb-link').forEach(l=>l.classList.remove('active'));
-  const map={affiliates:'sb-affiliates'};
+  const map={affiliates:'sb-affiliates',requests:'sb-requests',deals:'sb-deals'};
   if(map[page]) document.getElementById(map[page])?.classList.add('active');
 }
 function buildSimplePage(title,sub){
@@ -937,7 +1089,8 @@ function buildCard(a){
         const geosHTML = c.geos.map(f => `<span class="geo-f" data-panel="${c.type.toLowerCase()}|${c.key}|basic">${f}</span>`).join('');
         return `<div class="ch-item"><span class="ch-type">${c.type}</span><span class="ch-cnt">(${c.count}):</span><div class="ch-geos">${geosHTML}</div></div>`;
       }).join('');
-  const geoFlagsHTML = a.geos.map(f => `<span class="geo-f" title="${geoName(f)}" data-setfilter="geo|TIER 1">${f}</span>`).join('');
+  const topGeoHTML = a.topGeos.map(f => `<span class="geo-f" title="${geoName(f)}">${f}</span>`).join('');
+  const coverageGeoHTML = a.coverageGeos.map(f => `<span class="geo-f" title="${geoName(f)}">${f}</span>`).join('');
   return `<div class="aff-card">
     <div class="ch">
       <div class="ch-l">
@@ -946,8 +1099,8 @@ function buildCard(a){
       </div>
       <div class="ch-r">
         ${a.updated ? `<span class="ch-upd"><b>Updated:</b> ${a.updated}</span>` : ''}
+        ${a.requests ? `<span class="ch-req-badge">Requests: ${a.requests} (CLIENTBRAND)</span>` : ''}
         <div class="ch-dot ${a.active?'on':''}" title="${a.active?'Active':'Pending'}"></div>
-        <button class="ch-minus" data-affdetails="${a.id}" title="View affiliate details">−</button>
       </div>
     </div>
     <div class="cs">
@@ -959,7 +1112,8 @@ function buildCard(a){
         ${a.sources.ppc && a.sources.email ? `<span class="src-sep">|</span>` : ''}
         ${a.sources.email ? `<button class="src-chip email" data-panel="email|emaillist|basic">Email ×${a.sources.email}</button>` : ''}
       </div>
-      <div class="geo-row"><span class="geo-lbl">GEOs:</span>${geoFlagsHTML}</div>
+      <div class="geo-row"><span class="geo-lbl">Top GEOs (Value):</span>${topGeoHTML}</div>
+      <div class="geo-row"><span class="geo-lbl">Coverage GEOs:</span>${coverageGeoHTML}</div>
     </div>
     <div class="cc">
       <div class="cc-col">
@@ -972,10 +1126,10 @@ function buildCard(a){
       </div>
     </div>
     <div class="cp">
-      <div class="cp-hd"><span class="cp-ttl">SEO Performance</span><button class="cp-src">${perf ? 'Humbl' : '—'}</button></div>
+      <div class="cp-hd"><span class="cp-ttl">SEO Performance (Combined)</span><button class="cp-src">${perf ? 'Humbl' : '—'}</button></div>
       <div class="pg">
-        <div class="pc"><span class="p-lbl">FTDs</span><span class="p-val ${perf?'':'muted'}">${perf?perf.ftds:'—'}</span><span class="p-chg n">${perf?'Total':'—'}</span></div>
-        <div class="pc"><span class="p-lbl">LTV</span><span class="p-val ${perf?'':'muted'}">${perf?perf.ltv:'—'}</span><span class="p-chg">${perf?perf.ltvChg:'—'}</span></div>
+        <div class="pc"><span class="p-lbl">FTDs</span><span class="p-val ${perf?'':'muted'}">${perf?perf.ftds:'—'}</span></div>
+        <div class="pc"><span class="p-lbl">LTV</span><span class="p-val ${perf?'':'muted'}">${perf?perf.ltv:'—'}</span></div>
         <div class="pc"><span class="p-lbl">Value</span><span class="p-val ${perf?'':'muted'}">${perf?perf.value:'—'}</span><span class="p-chg">${perf?perf.valueChg:'—'}</span></div>
       </div>
     </div>
@@ -984,14 +1138,14 @@ function buildCard(a){
       <div class="cr-row">
         <div class="rel-dl">
           <span class="rel-dl-lbl">Deals:</span>
-          <button class="rel-dl-num" data-panel="seo|${seoKey}|deals">${a.deals.count}</button>
+          <button class="rel-dl-num" onclick="nav('deals')">${a.deals.count}</button>
           <span class="rel-badge ${a.deals.active?'':'none'}">${a.deals.active?'Active':'None'}</span>
         </div>
         <div class="rpills">
           ${a.deals.seo ? `<button class="rpill" data-panel="seo|${seoKey}|deals">SEO <span class="n">${a.deals.seo}</span></button>` : ''}
           ${a.deals.ppc ? `<button class="rpill" data-panel="ppc|googleppc|deals">PPC <span class="n">${a.deals.ppc}</span></button>` : ''}
           ${a.deals.email ? `<button class="rpill" data-panel="email|emaillist|deals">Email <span class="n">${a.deals.email}</span></button>` : ''}
-          ${!a.deals.seo && !a.deals.ppc && !a.deals.email ? `<button class="rpill" style="color:#a09690;border-color:#f0ece8;" disabled>SEO <span class="n">0</span></button>` : ''}
+          ${!a.deals.seo && !a.deals.ppc && !a.deals.email ? `<span class="rpill" style="color:#a09690;border-color:#f0ece8;">No deals</span>` : ''}
         </div>
       </div>
     </div>
@@ -1010,6 +1164,142 @@ function buildCard(a){
   </div>`;
 }
 
+// ═══ REQUESTS PAGE ═══
+function buildRequestsPage(){
+  const statusColors={'Pending Review':'status-pending','Outreach Started':'status-outreach','Group Created':'status-group','In Discussion':'status-discuss','Approved':'status-approved','Declined':'status-declined','Expired':'status-expired'};
+  const reqStatuses = ['All Status','Pending Review','Outreach Started','In Discussion','Approved','Declined','Expired'];
+  const filtered = requestFilter==='All Status' ? REQUESTS : REQUESTS.filter(r=>r.status===requestFilter);
+  const reqChipsHTML = reqStatuses.map(s=>`<button class="lf-chip${requestFilter===s?' lf-active':''}" onclick="setRequestFilter(this.dataset.s)" data-s="${s}">${s}</button>`).join('');
+  const rows = filtered.map(r=>{
+    const geoStr = r.geos.join(' ');
+    const srcStr = r.sources.length===0 ? '—' : r.sources.length===1 ? r.sources[0] : r.sources.length+' Sources';
+    const sc = statusColors[r.status]||'';
+    const rid = r.id;
+    return `<tr data-reqid="${rid}" style="cursor:pointer;"><td style="font-weight:600;">${r.affiliate}</td><td>${geoStr}</td><td>${r.type}</td><td style="font-size:12px;">${srcStr}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td style="color:#a09690;">${r.created}</td><td style="color:#a09690;">${r.updated}</td></tr>`;
+  }).join('');
+  const emptyRow = filtered.length===0 ? '<tr><td colspan="7" style="text-align:center;padding:28px;color:#a09690;">No requests match this filter</td></tr>' : '';
+  const tableBody = rows || emptyRow;
+  return `<div class="ph"><div><h1 class="ph-title">Requests</h1><p class="ph-sub">Track and manage all introduction requests</p></div><button class="btn-outline" onclick="openIntroModal('Gaming Innovation Group')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>New Request</button></div><div class="list-filters"><div class="list-filter-chips"><span class="list-filter-lbl">Status:</span>${reqChipsHTML}</div></div><div class="list-table-wrap"><table class="list-table"><thead><tr><th>Affiliate</th><th>GEOs</th><th>Type</th><th>Sources</th><th>Status</th><th>Created</th><th>Updated</th></tr></thead><tbody>${tableBody}</tbody></table></div>`;
+}
+function setRequestFilter(status){ requestFilter=status; document.getElementById('pageContent').innerHTML=buildRequestsPage(); }
+
+function openRequestDetail(id){
+  const r = REQUESTS.find(x=>x.id===id);
+  if(!r) return;
+  const geoStr = r.geos.join(', ');
+  const srcStr = r.sources.length===0 ? '—' : r.sources.join(', ');
+  const statusColors={'Pending Review':'status-pending','Outreach Started':'status-outreach','Group Created':'status-group','In Discussion':'status-discuss','Approved':'status-approved','Declined':'status-declined','Expired':'status-expired'};
+  const sc = statusColors[r.status]||'';
+  const activityHTML = r.activity.map(a=>`<div class="activity-row"><span class="activity-date">${a.date}</span><span class="activity-text">${a.text}</span></div>`).join('') || '<p style="color:#a09690;font-size:13px;">No activity yet.</p>';
+  const pc = document.getElementById('pageContent');
+  pc.innerHTML = `
+  <div class="ph" style="margin-bottom:14px;">
+    <div>
+      <button onclick="nav('requests')" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#a09690;margin-bottom:6px;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg> Back to Requests</button>
+      <h1 class="ph-title">Request Detail</h1>
+    </div>
+    <span class="status-badge ${sc}" style="align-self:flex-start;margin-top:8px;">${r.status}</span>
+  </div>
+  <div class="detail-meta">
+    <div class="detail-meta-row"><span class="dm-lbl">Affiliate</span><span class="dm-val">${r.affiliate}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Brand</span><span class="dm-val">CLIENTBRAND</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Created</span><span class="dm-val">${r.created}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">GEOs</span><span class="dm-val">${geoStr}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Type</span><span class="dm-val">${r.type}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Sources</span><span class="dm-val">${srcStr}</span></div>
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Relationship</h3>
+    <div class="detail-grid3">
+      <div class="pinfo-box"><div class="pinfo-lbl">Type</div><div class="pinfo-val">${r.relationship.type}</div></div>
+      <div class="pinfo-box"><div class="pinfo-lbl">Communication</div><div class="pinfo-val">${r.relationship.comm}</div></div>
+      <div class="pinfo-box"><div class="pinfo-lbl">Group</div><div class="pinfo-val">${r.relationship.group}</div></div>
+    </div>
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Request Details</h3>
+    <div class="pinfo-box" style="margin-bottom:8px;"><div class="pinfo-lbl">Types</div><div class="pinfo-val">${r.type}</div></div>
+    <div class="pinfo-box" style="margin-bottom:8px;"><div class="pinfo-lbl">Sources</div><div class="pinfo-val">${srcStr}</div></div>
+    ${r.notes ? `<div class="pdesc"><div class="pdesc-lbl">Notes</div><div class="pdesc-val">${r.notes}</div></div>` : ''}
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Activity</h3>
+    <div class="activity-log">${activityHTML}</div>
+  </div>`;
+}
+
+// ═══ DEALS PAGE ═══
+function buildDealsPage(){
+  const statusColors={Active:'status-approved',Planned:'status-outreach',Completed:'status-group',Cancelled:'status-declined'};
+  const dealStatuses = ['All Status','Active','Planned','Completed','Cancelled'];
+  const dealChipsHTML = dealStatuses.map(s=>`<button class="lf-chip${dealFilter===s?' lf-active':''}" onclick="setDealFilter(this.dataset.s)" data-s="${s}">${s}</button>`).join('');
+  const filtered = dealFilter==='All Status' ? DEALS : DEALS.filter(d=>d.status===dealFilter);
+  const rows = filtered.map(d=>{
+    const geoStr = d.geos.join(' ');
+    const srcStr = d.sources.length===0 ? '—' : d.sources.length===1 ? d.sources[0] : d.sources.length+' Sources';
+    const sc = statusColors[d.status]||'';
+    const did = d.id;
+    return `<tr data-dealid="${did}" style="cursor:pointer;"><td style="font-weight:600;">${d.affiliate}</td><td>${geoStr}</td><td>${d.type}</td><td style="font-size:12px;">${srcStr}</td><td><span class="status-badge ${sc}">${d.status}</span></td><td style="color:#a09690;">${d.start}</td><td style="color:#a09690;">${d.updated}</td></tr>`;
+  }).join('');
+  const emptyRow = filtered.length===0 ? '<tr><td colspan="7" style="text-align:center;padding:28px;color:#a09690;">No deals match this filter</td></tr>' : '';
+  const tableBody2 = rows || emptyRow;
+  return `<div class="ph"><div><h1 class="ph-title">Deals</h1><p class="ph-sub">Overview of all deals across affiliates</p></div></div><div class="list-filters"><div class="list-filter-chips"><span class="list-filter-lbl">Status:</span>${dealChipsHTML}</div></div><div class="list-table-wrap"><table class="list-table"><thead><tr><th>Affiliate</th><th>GEOs</th><th>Type</th><th>Sources</th><th>Status</th><th>Start</th><th>Updated</th></tr></thead><tbody>${tableBody2}</tbody></table></div>`;
+}
+function setDealFilter(status){ dealFilter=status; document.getElementById('pageContent').innerHTML=buildDealsPage(); }
+
+function openDealLog(id){
+  const d = DEALS.find(x=>x.id===id);
+  if(!d) return;
+  const pc = document.getElementById('pageContent');
+  const geoStr = d.geos.join(', ');
+  const srcStr = d.sources.length===0 ? '—' : d.sources.join(', ');
+  const statusColors={Active:'status-approved',Planned:'status-outreach',Completed:'status-group',Cancelled:'status-declined'};
+  const sc = statusColors[d.status]||'';
+  const commercialsHTML = d.commercials.length===0
+    ? '<p style="color:#a09690;font-size:13px;">No commercial terms logged.</p>'
+    : `<div style="overflow-x:auto;"><table class="list-table">
+        <thead><tr><th>Source</th><th>Start Date</th><th>CPA</th><th>Rev %</th><th>Listing Fee</th><th>Flat Fee</th></tr></thead>
+        <tbody>${d.commercials.map(c=>`<tr><td style="font-weight:600;">${c.source}</td><td>${c.start}</td><td>${c.cpa}</td><td>${c.rev}</td><td>${c.listing}</td><td>${c.flat}</td></tr>`).join('')}</tbody>
+      </table></div>`;
+  const scopeGeos = d.scope.geos.map(g=>`<span class="scope-tag">${g} ✓</span>`).join('');
+  const scopeChs = d.scope.channels.map(c=>`<span class="scope-tag">${c} ✓</span>`).join('');
+  pc.innerHTML = `
+  <div class="ph" style="margin-bottom:14px;">
+    <div>
+      <button onclick="nav('deals')" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#a09690;margin-bottom:6px;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg> Back to Deals</button>
+      <h1 class="ph-title">Deal Log</h1>
+    </div>
+    <span class="status-badge ${sc}" style="align-self:flex-start;margin-top:8px;">${d.status}</span>
+  </div>
+  <div class="detail-meta">
+    <div class="detail-meta-row"><span class="dm-lbl">Affiliate</span><span class="dm-val">${d.affiliate}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Brand</span><span class="dm-val">${d.brand}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Request</span><span class="dm-val" style="color:#e8735a;cursor:pointer;" onclick="openRequestDetail('${d.request}')">${d.request} →</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">GEOs</span><span class="dm-val">${geoStr}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Type</span><span class="dm-val">${d.type}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Sources</span><span class="dm-val">${srcStr}</span></div>
+    <div class="detail-meta-row"><span class="dm-lbl">Created</span><span class="dm-val">${d.created}</span></div>
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Deal Summary</h3>
+    <div class="detail-grid3">
+      <div class="pinfo-box"><div class="pinfo-lbl">Deal Type</div><div class="pinfo-val">${d.summary.dealType}</div></div>
+      <div class="pinfo-box"><div class="pinfo-lbl">Status</div><div class="pinfo-val">${d.status}</div></div>
+      <div class="pinfo-box"><div class="pinfo-lbl">End Date</div><div class="pinfo-val">${d.summary.endDate}</div></div>
+    </div>
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Scope</h3>
+    <div class="pinfo-box" style="margin-bottom:8px;"><div class="pinfo-lbl">GEOs</div><div class="pinfo-val" style="display:flex;gap:6px;flex-wrap:wrap;">${scopeGeos}</div></div>
+    <div class="pinfo-box"><div class="pinfo-lbl">Channels</div><div class="pinfo-val" style="display:flex;gap:6px;flex-wrap:wrap;">${scopeChs}</div></div>
+  </div>
+  <div class="detail-section">
+    <h3 class="detail-section-title">Commercials (By Source)</h3>
+    ${commercialsHTML}
+  </div>
+  ${d.notes ? `<div class="detail-section"><h3 class="detail-section-title">Notes</h3><div class="pdesc"><div class="pdesc-val">${d.notes}</div></div></div>` : ''}`;
+}
+
 // ═══ FILTERS ═══
 function getFilteredAffiliates(){
   let list = [...AFFILIATES];
@@ -1025,55 +1315,30 @@ function getActiveFilterChips(){
   if(filterState.geo!=='All GEOs') chips+=`<span class="active-filter">GEO: ${filterState.geo} <button onclick="clearFilter('geo')">×</button></span>`;
   return chips;
 }
-function setFilter(key,val,ddId){
-  filterState[key]=val;
-  closeAllDropdowns();
-  renderPage('affiliates');
-}
-function clearFilter(key){
-  const defaults={intro:'Introduced affiliates',deals:'All deals',vertical:'All verticals',geo:'All GEOs'};
-  filterState[key]=defaults[key];
-  renderPage('affiliates');
-}
-function filterBySearch(v){ /* could filter by name */ }
+function setFilter(key,val,ddId){ filterState[key]=val; closeAllDropdowns(); renderPage('affiliates'); }
+function clearFilter(key){ const defaults={intro:'Introduced affiliates',deals:'All deals',vertical:'All verticals',geo:'All GEOs'}; filterState[key]=defaults[key]; renderPage('affiliates'); }
+function filterBySearch(v){}
 function attachDropdowns(){}
-function toggleDD(id){
-  const menu=document.getElementById('ddm-'+id.replace('dd-',''));
-  if(!menu) return;
-  const isOpen=menu.classList.contains('open');
-  closeAllDropdowns();
-  if(!isOpen) menu.classList.add('open');
-}
-function closeAllDropdowns(){
-  document.querySelectorAll('.dd-menu').forEach(m=>m.classList.remove('open'));
-}
+function toggleDD(id){ const menu=document.getElementById('ddm-'+id.replace('dd-','')); if(!menu) return; const isOpen=menu.classList.contains('open'); closeAllDropdowns(); if(!isOpen) menu.classList.add('open'); }
+function closeAllDropdowns(){ document.querySelectorAll('.dd-menu').forEach(m=>m.classList.remove('open')); }
 
 // ── DELEGATED CLICK HANDLER ──
 document.addEventListener('click', e => {
+  // Request row click
+  const reqRow = e.target.closest('[data-reqid]');
+  if(reqRow){ openRequestDetail(reqRow.dataset.reqid); return; }
+  // Deal row click
+  const dealRow = e.target.closest('[data-dealid]');
+  if(dealRow){ openDealLog(dealRow.dataset.dealid); return; }
   if(!e.target.closest('.dd-wrap')) closeAllDropdowns();
   const el = e.target.closest('[data-panel],[data-affdetails],[data-trafficsrc],[data-introadd],[data-affid],[data-setfilter]');
   if(!el) return;
-  if(el.dataset.panel){
-    const [type,key,tab]=el.dataset.panel.split('|');
-    openPanel(type,key,tab); return;
-  }
+  if(el.dataset.panel){ const [type,key,tab]=el.dataset.panel.split('|'); openPanel(type,key,tab); return; }
   if(el.dataset.affdetails){ openAffDetails(el.dataset.affdetails); return; }
   if(el.dataset.trafficsrc){ openTrafficSources(el.dataset.trafficsrc); return; }
-  if(el.dataset.introadd){
-    const aff=AFFILIATES.find(a=>a.id===el.dataset.introadd);
-    openIntroModal(aff?aff.name:''); return;
-  }
-  if(el.dataset.affid && el.dataset.action){
-    const aff=AFFILIATES.find(a=>a.id===el.dataset.affid);
-    const name=aff?aff.name:el.dataset.affid;
-    if(el.dataset.action==='manage') toast('Manage: '+name);
-    if(el.dataset.action==='delete') toast('Delete: '+name);
-    return;
-  }
-  if(el.dataset.setfilter){
-    const [key,val]=el.dataset.setfilter.split('|');
-    setFilter(key,val,'dd-'+key); return;
-  }
+  if(el.dataset.introadd){ const aff=AFFILIATES.find(a=>a.id===el.dataset.introadd); openIntroModal(aff?aff.name:''); return; }
+  if(el.dataset.affid && el.dataset.action){ const aff=AFFILIATES.find(a=>a.id===el.dataset.affid); const name=aff?aff.name:el.dataset.affid; if(el.dataset.action==='manage'){ openManageModal(el.dataset.affid); return; } if(el.dataset.action==='delete'){ if(confirm('Delete '+name+'? This cannot be undone.')) toast('Deleted: '+name); return; } }
+  if(el.dataset.setfilter){ const [key,val]=el.dataset.setfilter.split('|'); setFilter(key,val,'dd-'+key); return; }
 });
 
 // ═══ TRAFFIC SOURCES MODAL ═══
@@ -1082,7 +1347,6 @@ function openTrafficSources(affId){
   const aff = AFFILIATES.find(a=>a.id===affId);
   sourceExpanded={};
   document.getElementById('mbTrafficSources').innerHTML = buildTrafficSourcesContent(aff);
-  // delegated clicks inside this modal
   document.getElementById('mbTrafficSources').onclick = e => {
     const toggleBtn = e.target.closest('[data-togglesrc]');
     if(toggleBtn){ const [aid,key]=toggleBtn.dataset.togglesrc.split('|'); toggleSourceExpand(aid,key); return; }
@@ -1101,25 +1365,15 @@ function buildTrafficSourcesContent(aff){
     const sites = type==='seo' ? aff.seoSites : [];
     const expanded = sourceExpanded[key];
     const btnClass = expanded ? 'btn-hide-sm' : 'btn-view-sm';
-    const btnLabel = expanded ? 'Hide' : 'View';
     html+=`<div class="source-type-row"><div class="source-type-l"><span class="source-type-name">${typeLabels[type]}</span><span class="source-cnt-badge">${count} source${count>1?'s':''}</span></div>
-      <button class="${btnClass}" data-togglesrc="${aff.id}|${key}">${btnLabel}</button></div>`;
-    if(expanded && sites.length){
-      sites.forEach(s=>{
-        html+=`<div class="source-item-row"><span class="source-item-name">${s.name}</span><button class="badge-accepted" data-srcdetails="${s.key}">Accepted</button></div>`;
-      });
-    }
+      <button class="${btnClass}" data-togglesrc="${aff.id}|${key}">${expanded?'Hide':'View'}</button></div>`;
+    if(expanded && sites.length){ sites.forEach(s=>{ html+=`<div class="source-item-row"><span class="source-item-name">${s.name}</span><button class="badge-accepted" data-srcdetails="${s.key}">Accepted</button></div>`; }); }
   });
   return html;
 }
-function toggleSourceExpand(affId,key){
-  sourceExpanded[key]=!sourceExpanded[key];
-  const aff=AFFILIATES.find(a=>a.id===affId);
-  document.getElementById('mbTrafficSources').innerHTML=buildTrafficSourcesContent(aff);
-}
+function toggleSourceExpand(affId,key){ sourceExpanded[key]=!sourceExpanded[key]; const aff=AFFILIATES.find(a=>a.id===affId); document.getElementById('mbTrafficSources').innerHTML=buildTrafficSourcesContent(aff); }
 function openSourceDetails(sourceKey){
-  const src=SOURCES[sourceKey];
-  if(!src) return;
+  const src=SOURCES[sourceKey]; if(!src) return;
   const b=src.basic;
   let html=`<div class="sd-grid">`;
   if(src.type==='seo'){
@@ -1129,93 +1383,32 @@ function openSourceDetails(sourceKey){
     html+=`<div class="sd-field"><div class="sd-field-lbl">Commercial Type</div><div class="sd-field-val">CPA</div></div>`;
     html+=`<div class="sd-field"><div class="sd-field-lbl">GEO Coverage</div><div class="sd-field-val">TIER 1</div></div>`;
     html+=`<div class="sd-field"><div class="sd-field-lbl">Languages</div><div class="sd-field-val">English</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Compliance / Traffic Quality</div><div class="sd-field-val">—</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Player Type / Audience Focus</div><div class="sd-field-val">—</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Compliance Regions</div><div class="sd-field-val">—</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Blacklisted Regions</div><div class="sd-field-val">—</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Contact Name</div><div class="sd-field-val">—</div></div>`;
-    html+=`<div class="sd-field"><div class="sd-field-lbl">Job Title</div><div class="sd-field-val">—</div></div>`;
   }
   html+=`</div>`;
   document.getElementById('mbSourceDetails').innerHTML=html;
-  closeModal('modalTrafficSources');
-  openModal('modalSourceDetails');
-}
-
-// ═══ PRIMARY VERTICALS MODAL ═══
-function openVerticalsModal(affId){
-  const aff=AFFILIATES.find(a=>a.id===affId);
-  document.getElementById('mbVerticals').innerHTML=aff.verticals.map(v=>`<div class="vert-item">${v}</div>`).join('');
-  openModal('modalVerticals');
-}
-
-// ═══ AFFILIATE DETAILS (— button) ═══
-function openAffDetails(affId){
-  const aff=AFFILIATES.find(a=>a.id===affId);
-  const d=aff.affDetails;
-  document.getElementById('affDetailsBadge').textContent=d.badge;
-  document.getElementById('affDetailsBadge').className='modal-badge'+(d.badge==='Pending'?' pending':'');
-  let html='';
-  html+=`<div class="aff-detail-section"><div class="aff-detail-section-lbl">Introduced Traffic Sources</div><div class="aff-detail-sub">${d.sources.reduce((a,s)=>a+s.count,0)} total source across ${d.sources.length} type.</div>`;
-  d.sources.forEach(s=>{
-    const key='ad_'+s.type.replace(/\s/g,'_');
-    const exp=sourceExpanded[key];
-    html+=`<div class="source-type-row"><div class="source-type-l"><span class="source-type-name">${s.type}</span><span class="source-cnt-badge">${s.count} source</span></div>
-      <button class="${exp?'btn-hide-sm':'btn-view-sm'}" data-togglead="${affId}|${key}">${exp?'Hide':'View'}</button></div>`;
-    if(exp){
-      s.sites.forEach(site=>{
-        html+=`<div class="source-item-row"><span class="source-item-name">${site}</span><span class="badge-accepted">Accepted</span></div>`;
-      });
-    }
-  });
-  html+='</div>';
-  if(d.pendingDeals.length){
-    html+=`<div class="aff-detail-section"><div class="aff-detail-section-lbl">${d.pendingDeals.length} Pending Deal${d.pendingDeals.length>1?'s':''}</div>`;
-    d.pendingDeals.forEach(deal=>{
-      html+=`<div class="deal-row"><span>${deal.type}</span><span class="sep">·</span><span>${deal.site}</span><span class="sep">·</span><span>${deal.deal}</span><span class="sep">·</span><span style="color:#a09690;">${deal.date}</span></div>`;
-    });
-    html+='</div>';
-  }
-  document.getElementById('mbAffDetails').innerHTML=html;
-  // delegated clicks for expand buttons
-  document.getElementById('mbAffDetails').onclick = e => {
-    const btn = e.target.closest('[data-togglead]');
-    if(btn){ const [aid,key]=btn.dataset.togglead.split('|'); toggleADExpand(aid,key); }
-  };
-  openModal('modalAffDetails');
-}
-function toggleADExpand(affId,key){
-  sourceExpanded[key]=!sourceExpanded[key];
-  openAffDetails(affId);
+  closeModal('modalTrafficSources'); openModal('modalSourceDetails');
 }
 
 // ═══ MODALS ═══
 function openModal(id){ document.getElementById(id).classList.add('open'); }
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
-// click outside to close
-document.querySelectorAll('.modal-bg').forEach(bg=>{
-  bg.addEventListener('click',e=>{ if(e.target===bg) bg.classList.remove('open'); });
-});
+document.querySelectorAll('.modal-bg').forEach(bg=>{ bg.addEventListener('click',e=>{ if(e.target===bg) bg.classList.remove('open'); }); });
 
 // ═══ INTRO MODAL ═══
-function openIntroModal(name){
-  document.getElementById('introAffiliateName').textContent=name;
-  openModal('modalIntro');
-}
+function openIntroModal(name){ document.getElementById('introAffiliateName').textContent=name; openModal('modalIntro'); }
 function submitIntro(){ closeModal('modalIntro'); toast('Introduction request submitted ✓'); }
 
 // ═══ SOURCE PANEL ═══
 let curSource=null, curTab=null;
 function openPanel(type,key,tab){
   curSource=key; curTab=tab;
-  const src=SOURCES[key];
-  if(!src) return;
+  const src=SOURCES[key]; if(!src) return;
   const typeEl=document.getElementById('panelType');
   typeEl.textContent=src.badge;
   typeEl.className='panel-type'+(type==='ppc'?' ppc':type==='email'?' email':'');
   document.getElementById('panelTitle').textContent=src.title;
   document.getElementById('panelIntroBtn').onclick=()=>openIntroModal('Gaming Innovation Group');
-  const tabs=type==='seo'?['basic','traffic','geo','brand','page','compliance','deals']:['basic','deals','contact'];
+  const tabs=type==='seo'?['basic','traffic','geo','brand','page','compliance','contact']:['basic','deals','contact'];
   const labels={basic:'Basic',traffic:'Traffic',geo:'GEO',brand:'Brand',page:'Page',compliance:'Compliance',deals:'Deals',contact:'Contact'};
   document.getElementById('panelTabs').innerHTML=tabs.map(t=>`<button class="ptab${t===tab?' active':''}" onclick="switchPTab('${t}')">${labels[t]}</button>`).join('');
   renderPTab(tab);
@@ -1243,11 +1436,11 @@ function renderPBasic(src){
     return `<div class="pinfo-grid">
       <div class="pinfo-box"><div class="pinfo-lbl">Domain</div><div class="pinfo-val"><a onclick="toast('Opening ${b.domain}')">${b.domain}</a></div></div>
       <div class="pinfo-box"><div class="pinfo-lbl">Primary GEOs</div><div class="pinfo-val geos">${b.geos.map(f=>`<span class="geo-f" style="font-size:18px;" onclick="switchPTab('geo')">${f}</span>`).join('')}</div></div>
-      <div class="pinfo-box"><div class="pinfo-lbl">Vertical</div><div class="pinfo-val" style="color:#e8735a;cursor:pointer;" onclick="toast('Filter by ${b.vertical}')">${b.vertical}</div></div>
+      <div class="pinfo-box"><div class="pinfo-lbl">Vertical</div><div class="pinfo-val" style="color:#e8735a;">${b.vertical}</div></div>
       <div class="pinfo-box"><div class="pinfo-lbl">Last Data Refresh</div><div class="pinfo-val">${b.refresh}</div></div>
       <div class="pinfo-box" style="grid-column:1/-1;"><div class="pinfo-lbl">Source Type</div><div class="pinfo-val">${b.sourceType}</div></div>
     </div>
-    <div class="auth-wrap"><div class="pinfo-lbl">Authority Score</div><div class="auth-score-line"><span class="auth-num" onclick="toast('Authority score measures SEO domain strength')">${b.authority}</span><span class="auth-denom">/ 100</span></div><div class="auth-bar"><div class="auth-fill" style="width:${pct};"></div></div></div>
+    <div class="auth-wrap"><div class="pinfo-lbl">Domain Strength Score</div><div class="auth-score-line"><span class="auth-num">${b.authority}</span><span class="auth-denom">/ 100</span></div><div class="auth-bar"><div class="auth-fill" style="width:${pct};"></div></div></div>
     <div class="pdesc"><div class="pdesc-lbl">Description</div><div class="pdesc-val">${b.desc}</div></div>`;
   } else {
     return `<div class="pinfo-grid">
@@ -1274,12 +1467,8 @@ function renderPTraffic(src){
   if(!src.traffic) return '<p style="color:#a09690;font-size:13px;">No traffic data.</p>';
   const t=src.traffic;
   const topGeosHTML=t.topGeos.map(([f,n,p])=>`<div class="geo-bar-row"><div class="geo-bar-l"><span style="font-size:14px;">${f}</span><span style="font-size:12px;font-weight:500;color:#334155;">${n}</span></div><span class="geo-bar-pct">${p}%</span></div>`).join('');
-  const similarHTML=t.similar.map(s=>`<div class="similar-item"><div class="sim-dot"></div><span class="sim-name">${s}</span></div>`).join('');
-  return `<div class="geo-filter"><span class="gfl">Filter GEO:</span>
-    <button class="gfpill on">All GEOs</button>
-    <button class="gfpill">🇩🇪 Germany</button>
-    <button class="gfpill">🇬🇧 UK</button>
-  </div>
+  const similarHTML=t.similar.map(s=>`<div class="similar-item"><div class="sim-dot"></div><span class="sim-name">${s.name}</span>${s.note?`<span style="font-size:11px;color:#a09690;margin-left:4px;">(${s.note})</span>`:''}</div>`).join('');
+  return `<div class="geo-filter"><span class="gfl">Filter GEO:</span><button class="gfpill on" onclick="this.closest('.geo-filter').querySelectorAll('.gfpill').forEach(b=>b.classList.remove('on'));this.classList.add('on')">All GEOs</button><button class="gfpill" onclick="this.closest('.geo-filter').querySelectorAll('.gfpill').forEach(b=>b.classList.remove('on'));this.classList.add('on')">🇩🇪 Germany</button><button class="gfpill" onclick="this.closest('.geo-filter').querySelectorAll('.gfpill').forEach(b=>b.classList.remove('on'));this.classList.add('on')">🇬🇧 UK</button></div>
   <div class="stat3">
     <div class="scard"><div class="scard-lbl">Est. Monthly FTDs</div><div class="scard-val">${t.ftds.toLocaleString()}</div><div class="scard-chg">${t.ftdChg} vs prev 30 days</div></div>
     <div class="scard"><div class="scard-lbl">Est. Player LTV</div><div class="scard-val">$${t.ltv}</div><div class="scard-chg">NGR ${t.ltvChg}</div></div>
@@ -1296,11 +1485,9 @@ function renderPGeo(src){
   const rows=src.geo.table;
   const totV=rows.reduce((a,r)=>a+r[3],0).toLocaleString();
   const totF=rows.reduce((a,r)=>a+r[4],0).toLocaleString();
-  const filterBtns=rows.slice(0,3).map(r=>`<button class="gfpill">${r[0]} ${r[1]}</button>`).join('');
   const barRows=rows.map(r=>`<div class="geo-bar-row"><div class="geo-bar-l"><span style="font-size:14px;">${r[0]}</span><span style="font-size:12px;font-weight:500;">${r[1]}</span></div><div style="display:flex;align-items:center;gap:6px;"><div style="width:50px;height:5px;border-radius:9999px;background:#f0ece8;overflow:hidden;"><div style="width:${r[2]}%;height:100%;background:#e8735a;border-radius:9999px;"></div></div><span class="geo-bar-pct">${r[2]}%</span></div></div>`).join('');
   const tableRows=rows.map(r=>`<tr><td>${r[0]} ${r[1]}</td><td>${r[2]}%</td><td>${r[3].toLocaleString()}</td><td>${r[4]}</td><td>$${r[5]}</td><td style="color:#007956;font-weight:600;">${r[6]}</td></tr>`).join('');
-  return `<div class="geo-filter"><span class="gfl">Filter GEO:</span>
-    <button class="gfpill on">All GEOs</button>${filterBtns}</div>
+  return `<div class="geo-filter"><span class="gfl">Filter GEO:</span><button class="gfpill on">All GEOs</button></div>
   <div class="two-col-panel">
     <div class="pbox"><div class="pbox-ttl">GEO Traffic Distribution</div>${barRows}</div>
     <div style="display:flex;flex-direction:column;gap:8px;">
@@ -1318,106 +1505,63 @@ function renderPGeo(src){
 function renderPBrand(src){
   if(!src.brand) return '<p style="color:#a09690;font-size:13px;">No brand data.</p>';
   const brd=src.brand;
-  const rowsHTML = brd.rankings.map((r,i)=>
-    `<div class="brand-row${i===0?' sel':''}" data-brandsel="${r[0]}"><span class="brand-pos">#${i+1}</span><span class="brand-nm">${r[0]}</span><span class="brand-pg-cnt">${r[1]} pages</span></div>`
-  ).join('');
-  const html = `<div class="geo-filter"><span class="gfl">Filter GEO:</span><button class="gfpill on">Germany</button><button class="gfpill">🇬🇧 UK</button></div>
+  const rowsHTML=brd.rankings.map((r,i)=>`<div class="brand-row${i===0?' sel':''}" data-brandsel="${r[0]}"><span class="brand-pos">#${i+1}</span><span class="brand-nm">${r[0]}</span><span class="brand-pg-cnt">${r[1]} pages</span></div>`).join('');
+  const html=`<div class="geo-filter"><span class="gfl">Filter GEO:</span><button class="gfpill on">Germany</button><button class="gfpill">🇬🇧 UK</button></div>
   <div class="two-col-panel">
     <div class="pbox"><div class="pbox-ttl">Brand Rankings</div><div class="brand-list" id="brandList">${rowsHTML}</div></div>
     <div class="pbox" id="brandDetail"><div class="pbox-ttl">Selected Brand Details</div>${renderBrandDetail(brd.detail)}</div>
   </div>`;
-  // attach delegated handler after render (use timeout so DOM is ready)
-  setTimeout(()=>{
-    const bl = document.getElementById('brandList');
-    if(bl) bl.onclick = e => {
-      const row = e.target.closest('[data-brandsel]');
-      if(!row) return;
-      document.querySelectorAll('.brand-row').forEach(r=>r.classList.remove('sel'));
-      row.classList.add('sel');
-      const name = row.dataset.brandsel;
-      const pages=[{url:'/best-online-casinos',pos:'#1'},{url:'/'+name.toLowerCase().replace(/\s+/g,'-')+'-review',pos:'#2'}];
-      const bd = document.getElementById('brandDetail');
-      if(bd) bd.innerHTML='<div class="pbox-ttl">Selected Brand Details</div>'+renderBrandDetail({brand:name,geo:'Germany',pages});
-    };
-  },0);
+  setTimeout(()=>{ const bl=document.getElementById('brandList'); if(bl) bl.onclick=e=>{ const row=e.target.closest('[data-brandsel]'); if(!row) return; document.querySelectorAll('.brand-row').forEach(r=>r.classList.remove('sel')); row.classList.add('sel'); const name=row.dataset.brandsel; const pages=[{url:'/best-online-casinos',pos:'#1'},{url:'/'+name.toLowerCase().replace(/\s+/g,'-')+'-review',pos:'#2'}]; const bd=document.getElementById('brandDetail'); if(bd) bd.innerHTML='<div class="pbox-ttl">Selected Brand Details</div>'+renderBrandDetail({brand:name,geo:'Germany',pages}); }; },0);
   return html;
 }
 function renderBrandDetail(d){
   const pHTML=d.pages.map(p=>`<div style="padding:7px 0;border-bottom:1px solid #f0ece8;"><div style="font-size:12px;font-weight:600;color:#e8735a;cursor:pointer;">${p.url}</div><div style="font-size:11px;color:#7a6f66;margin-top:1px;">Position: <strong style="color:#0f172b;">${p.pos}</strong></div></div>`).join('');
-  return `<div style="margin-bottom:9px;"><div style="font-size:13px;font-weight:700;">${d.brand}</div><div style="font-size:11px;color:#7a6f66;">${d.geo}</div></div>
-  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#a09690;margin-bottom:7px;">Placements</div>${pHTML}`;
+  return `<div style="margin-bottom:9px;"><div style="font-size:13px;font-weight:700;">${d.brand}</div><div style="font-size:11px;color:#7a6f66;">${d.geo}</div></div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#a09690;margin-bottom:7px;">Placements</div>${pHTML}`;
 }
 const tagMap={TRANSACTIONAL:'t',CRYPTO:'c',BONUS:'b',NEW:'nw',REVIEW:'r',LIVE:'l'};
 function renderPPage(src){
   if(!src.page) return '<p style="color:#a09690;font-size:13px;">No page data.</p>';
-  const rowsHTML=src.page.rows.map(r=>{
-    const tagsHTML=r[1].map(t=>`<span class="tag ${tagMap[t]||''}">${t}</span>`).join('');
-    return `<tr><td><a class="page-url">${r[0]}</a></td><td>${tagsHTML}</td><td style="font-weight:600;">${r[2]}</td><td style="color:#007956;font-weight:600;">${r[3]}</td><td style="color:#a09690;">${r[4]}</td></tr>`;
-  }).join('');
+  const rowsHTML=src.page.rows.map(r=>{ const tagsHTML=r[1].map(t=>`<span class="tag ${tagMap[t]||''}">${t}</span>`).join(''); return `<tr><td><a class="page-url">${r[0]}</a></td><td>${tagsHTML}</td><td style="font-weight:600;">${r[2]}</td><td style="color:#007956;font-weight:600;">${r[3]}</td><td style="color:#a09690;">${r[4]}</td></tr>`; }).join('');
   return `<div class="geo-filter"><button class="gfpill on">Germany</button><button class="gfpill">🇬🇧 UK</button></div>
   <div class="pfilter-row"><button class="p-flt-btn">Tags ▼</button><button class="p-flt-btn">Page ▼</button><button class="p-sort-btn">FTDs ↓</button></div>
-  <div class="ptable-wrap"><table class="ptable">
-    <thead><tr><th>Page</th><th>Tags</th><th>Est FTDs</th><th>Est Value</th><th>Crawled</th></tr></thead>
-    <tbody>${rowsHTML}</tbody>
-  </table></div>`;
+  <div class="ptable-wrap"><table class="ptable"><thead><tr><th>Page</th><th>Tags</th><th>Est FTDs</th><th>Est Value</th><th>Crawled</th></tr></thead><tbody>${rowsHTML}</tbody></table></div>`;
 }
 function renderPCompliance(src){
   if(!src.compliance) return '<p style="color:#a09690;font-size:13px;">No compliance data.</p>';
   const c=src.compliance;
-  const tbodyHTML = c.brands.map((r,i)=>
-    `<tr class="${i===0?'sel':''}" data-compbrand="${r[0]}"><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`
-  ).join('');
-  const html = `<div class="geo-filter"><button class="gfpill on">Germany</button><button class="gfpill">🇬🇧 UK</button></div>
+  const tbodyHTML=c.brands.map((r,i)=>`<tr class="${i===0?'sel':''}" data-compbrand="${r[0]}"><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+  const html=`<div class="geo-filter"><button class="gfpill on">Germany</button><button class="gfpill">🇬🇧 UK</button></div>
   <div class="two-col-panel">
-    <div class="pbox"><div class="pbox-ttl">Brand Activity</div><table class="ctable">
-      <thead><tr><th>Brand</th><th>Pages</th><th>Avg Pos</th></tr></thead>
-      <tbody id="ctable">${tbodyHTML}</tbody>
-    </table></div>
+    <div class="pbox"><div class="pbox-ttl">Brand Activity</div><table class="ctable"><thead><tr><th>Brand</th><th>Pages</th><th>Avg Pos</th></tr></thead><tbody id="ctable">${tbodyHTML}</tbody></table></div>
     <div class="pbox" id="compDetail"><div class="pbox-ttl">Brand Detail</div>${renderCompDetail(c.detail)}</div>
   </div>`;
-  setTimeout(()=>{
-    const ct = document.getElementById('ctable');
-    if(ct) ct.onclick = e => {
-      const row = e.target.closest('[data-compbrand]');
-      if(!row) return;
-      document.querySelectorAll('#ctable tr').forEach(r=>r.classList.remove('sel'));
-      row.classList.add('sel');
-      const name = row.dataset.compbrand;
-      const pages=[{url:'/best-online-casinos',pos:'#1',bonus:'200% + 200 FS',cta:'Play Now',terms:'Present'},{url:'/'+name.toLowerCase().replace(/\s+/g,'-'),pos:'#3',bonus:'—',cta:'—',terms:'Missing'}];
-      const cd = document.getElementById('compDetail');
-      if(cd) cd.innerHTML='<div class="pbox-ttl">Brand Detail</div>'+renderCompDetail({brand:name,geo:'Germany',pages});
-    };
-  },0);
+  setTimeout(()=>{ const ct=document.getElementById('ctable'); if(ct) ct.onclick=e=>{ const row=e.target.closest('[data-compbrand]'); if(!row) return; document.querySelectorAll('#ctable tr').forEach(r=>r.classList.remove('sel')); row.classList.add('sel'); const name=row.dataset.compbrand; const pages=[{url:'/best-online-casinos',pos:'#1',bonus:'200% + 200 FS',cta:'Play Now',terms:'Present'},{url:'/'+name.toLowerCase().replace(/\s+/g,'-'),pos:'#3',bonus:'—',cta:'—',terms:'Missing'}]; const cd=document.getElementById('compDetail'); if(cd) cd.innerHTML='<div class="pbox-ttl">Brand Detail</div>'+renderCompDetail({brand:name,geo:'Germany',pages}); }; },0);
   return html;
 }
 function renderCompDetail(d){
-  const pagesHTML = d.pages.map(p=>{
-    const termsHTML = p.terms ? (p.terms==='Present' ? '<span class="b-present">Present</span>' : '<span class="b-missing">Missing</span>') : '';
-    return `<div style="padding:7px 0;border-bottom:1px solid #f0ece8;">
-      <div style="font-size:12px;font-weight:600;color:#e8735a;cursor:pointer;">${p.url}</div>
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin-top:3px;font-size:11px;color:#7a6f66;">
-        <span>Position:</span><span style="font-weight:600;color:#0f172b;">${p.pos}</span>
-        ${p.bonus ? `<span>Bonus:</span><span>${p.bonus}</span>` : ''}
-        ${p.cta ? `<span>CTA:</span><span>${p.cta}</span>` : ''}
-        ${p.terms ? `<span>Terms:</span><span>${termsHTML}</span>` : ''}
-      </div></div>`;
-  }).join('');
-  return `<div style="margin-bottom:9px;"><div style="font-size:13px;font-weight:700;">${d.brand}</div><div style="font-size:11px;color:#7a6f66;">GEO: ${d.geo}</div></div>
-  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#a09690;margin-bottom:7px;">Pages (${d.pages.length})</div>
-  ${pagesHTML}
-  <div style="font-size:11px;color:#a09690;margin-top:7px;">Observed: 16 Mar 2026</div>`;
+  const pagesHTML=d.pages.map(p=>{ const termsHTML=p.terms?(p.terms==='Present'?'<span class="b-present">Present</span>':'<span class="b-missing">Missing</span>'):''; return `<div style="padding:7px 0;border-bottom:1px solid #f0ece8;"><div style="font-size:12px;font-weight:600;color:#e8735a;cursor:pointer;">${p.url}</div><div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin-top:3px;font-size:11px;color:#7a6f66;"><span>Position:</span><span style="font-weight:600;color:#0f172b;">${p.pos}</span>${p.bonus?`<span>Bonus:</span><span>${p.bonus}</span>`:''} ${p.cta?`<span>CTA:</span><span>${p.cta}</span>`:''} ${p.terms?`<span>Terms:</span><span>${termsHTML}</span>`:''}</div></div>`; }).join('');
+  return `<div style="margin-bottom:9px;"><div style="font-size:13px;font-weight:700;">${d.brand}</div><div style="font-size:11px;color:#7a6f66;">GEO: ${d.geo}</div></div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#a09690;margin-bottom:7px;">Pages (${d.pages.length})</div>${pagesHTML}<div style="font-size:11px;color:#a09690;margin-top:7px;">Observed: 16 Mar 2026</div>`;
 }
 function renderPDeals(src){
   const deals=src.deals||[];
-  const rowsHTML = deals.map(d=>{
-    const statusBadge = d[3]==='Active' ? '<span class="deal-active">Active</span>' : '<span class="deal-done">Completed</span>';
-    return `<tr><td style="font-weight:700;color:#e8735a;">${d[0]}</td><td style="font-weight:600;">${d[1]}</td><td>${d[2]}</td><td>${statusBadge}</td></tr>`;
-  }).join('');
+  const rowsHTML=deals.map(d=>{ const statusBadge=d[3]==='Active'?'<span class="deal-active">Active</span>':'<span class="deal-done">Completed</span>'; return `<tr><td style="font-weight:700;color:#e8735a;">${d[0]}</td><td style="font-weight:600;">${d[1]}</td><td>${d[2]}</td><td>${statusBadge}</td></tr>`; }).join('');
   return `<p style="font-size:13px;font-weight:700;color:#0f172b;margin-bottom:10px;">Deals Linked to Source</p>
-  <table class="dtable"><thead><tr><th>Deal ID</th><th>Brand</th><th>Type</th><th>Status</th></tr></thead>
-  <tbody>${rowsHTML}</tbody></table>`;
+  <table class="dtable"><thead><tr><th>Deal ID</th><th>Brand</th><th>Type</th><th>Status</th></tr></thead><tbody>${rowsHTML}</tbody></table>`;
 }
 function renderPContact(src){
+  if(src.contact && src.contact.affiliate){
+    const c=src.contact;
+    const mkTable=rows=>rows.map(r=>`<tr><td style="font-weight:600;">${r.name}</td><td>${r.role}</td><td style="color:#e8735a;">${r.email}</td><td>${r.tg}</td></tr>`).join('');
+    return `<div class="contact-section">
+      <div class="contact-section-lbl">Affiliate Contacts (GIG)</div>
+      <table class="list-table" style="margin-bottom:14px;"><thead><tr><th>Name</th><th>Role</th><th>Email</th><th>TG</th></tr></thead><tbody>${mkTable(c.affiliate)}</tbody></table>
+      <div class="contact-section-lbl">Source Contacts (${src.title})</div>
+      <table class="list-table" style="margin-bottom:14px;"><thead><tr><th>Name</th><th>Role</th><th>Email</th><th>TG</th></tr></thead><tbody>${mkTable(c.source)}</tbody></table>
+      <div class="contact-section-lbl">Brand Contacts (CLIENTBRAND)</div>
+      <table class="list-table" style="margin-bottom:14px;"><thead><tr><th>Name</th><th>Role</th><th>Email</th><th>TG</th></tr></thead><tbody>${mkTable(c.brand)}</tbody></table>
+      ${c.notes?`<div class="pdesc"><div class="pdesc-lbl">Internal Notes</div><div class="pdesc-val">${c.notes}</div></div>`:''}
+    </div>`;
+  }
   const c=src.contact||{};
   return `<div style="padding:9px 11px;background:#fff7ed;border:1px solid #ffd7a8;border-radius:7px;margin-bottom:14px;display:flex;gap:7px;align-items:flex-start;">
     <span style="font-size:15px;">🔒</span><span style="font-size:12px;color:#c53c00;font-weight:500;">Admin only — hidden from brand accounts.</span>
@@ -1429,11 +1573,190 @@ function renderPContact(src){
   <div class="pdesc"><div class="pdesc-lbl">Notes</div><div class="pdesc-val">${c.notes||'—'}</div></div>`;
 }
 
-// ═══ SIDEBAR TOGGLE ═══
-function toggleSB(btn){
-  btn.classList.toggle('collapsed');
-  btn.nextElementSibling.classList.toggle('hidden');
+
+// ═══ MANAGE MODAL ═══
+let _manageAffId = null;
+function openManageModal(affId){
+  const aff = AFFILIATES.find(a=>a.id===affId);
+  if(!aff) return;
+  _manageAffId = affId;
+  document.getElementById('manageAffName').textContent = 'Manage — ' + aff.name;
+  switchManageTab('details');
+  document.querySelectorAll('#manageTabs .ptab').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+  openModal('modalManage');
 }
+function switchManageTab(tab){
+  const aff = AFFILIATES.find(a=>a.id===_manageAffId);
+  if(!aff) return;
+  document.querySelectorAll('#manageTabs .ptab').forEach(b=>{
+    b.classList.toggle('active', b.textContent.toLowerCase()===tab);
+  });
+  const body = document.getElementById('manageBody');
+  if(tab==='details'){
+    body.innerHTML = `
+      <div class="form-field"><div class="form-lbl">Affiliate Name</div>
+        <input type="text" class="form-select" id="mAffName" value="${aff.name}" style="outline:none;width:100%;"></div>
+      <div class="form-field"><div class="form-lbl">Relationship Status</div>
+        <select class="form-select" id="mAffStatus">
+          <option ${aff.active?'selected':''}>Active</option>
+          <option ${!aff.active?'selected':''}>Pending</option>
+          <option>Paused</option>
+        </select></div>
+      <div class="form-field"><div class="form-lbl">Verticals</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+          ${['CASINO','SPORTS','POKER','BINGO'].map(v=>`<label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="checkbox" ${aff.verticals.includes(v)?'checked':''} style="accent-color:var(--hog-coral);"> ${v}</label>`).join('')}
+        </div></div>
+      <div class="form-field"><div class="form-lbl">Internal Notes</div>
+        <textarea class="form-textarea" id="mAffNotes" placeholder="Add internal notes about this affiliate...">${(SOURCES[aff.seoSites[0]?.key]?.contact?.notes)||''}</textarea></div>
+    `;
+  } else if(tab==='contacts'){
+    const src = SOURCES[aff.seoSites[0]?.key];
+    const c = src?.contact || {};
+    const inp = (val,ph) => `<td><input type="text" value="${val||''}" placeholder="${ph}" class="form-select" style="padding:5px 7px;font-size:12px;width:100%;outline:none;border-radius:6px;"></td>`;
+    const mkRow = (r) => `<tr>${inp(r.name,'Name')}${inp(r.role,'Role')}${inp(r.email,'Email')}${inp(r.tg,'@handle')}<td><button onclick="this.closest('tr').remove()" style="color:#dc2626;font-size:18px;line-height:1;padding:0 6px;font-weight:300;">×</button></td></tr>`;
+    const mkTable = (label, rows) => {
+      const id = 'ct_' + label.replace(/\s+/g,'_');
+      return `<div class="contact-section-lbl" style="margin-top:16px;">${label}</div>
+      <table class="list-table" style="margin-top:6px;"><thead><tr><th>Name</th><th>Role</th><th>Email</th><th>TG</th><th></th></tr></thead>
+      <tbody id="${id}">${(rows||[]).map(mkRow).join('')}</tbody></table>
+      <button onclick="addContactRow('${id}')" style="margin-top:8px;font-size:12px;font-weight:700;color:var(--hog-coral-dark);cursor:pointer;display:flex;align-items:center;gap:4px;touch-action:manipulation;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:13px;height:13px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg> Add Contact</button>`;
+    };
+    body.innerHTML = mkTable('Affiliate Contacts', c.affiliate||[]) + mkTable('Source Contacts', c.source||[]) + mkTable('Brand Contacts', c.brand||[]);
+  }
+}
+function addContactRow(tbodyId){
+  const tb = document.getElementById(tbodyId);
+  if(!tb) return;
+  const tr = document.createElement('tr');
+  tr.innerHTML = ['Name','Role','Email','@handle'].map(ph=>`<td><input type="text" placeholder="${ph}" class="form-select" style="padding:5px 7px;font-size:12px;width:100%;outline:none;border-radius:6px;"></td>`).join('') +
+    `<td><button onclick="this.closest('tr').remove()" style="color:#dc2626;font-size:18px;line-height:1;padding:0 6px;font-weight:300;">×</button></td>`;
+  tb.appendChild(tr);
+}
+function saveManage(){ closeModal('modalManage'); toast('Affiliate updated ✓'); }
+
+// ═══ DASHBOARD PAGE ═══
+function buildDashboardPage(){
+  // Sparkline helper for charts
+  function miniChart(pts, color, h){
+    const W=400,H=h||100,p=6,mx=Math.max(...pts,1),mn=0;
+    const px=i=>p+i*(W-2*p)/(pts.length-1);
+    const py=v=>H-p-(v-mn)/(mx-mn||1)*(H-2*p);
+    const path='M'+pts.map((v,i)=>`${px(i).toFixed(1)},${py(v).toFixed(1)}`).join('L');
+    const fill='M'+px(0)+','+H+' L'+pts.map((v,i)=>`${px(i).toFixed(1)},${py(v).toFixed(1)}`).join('L')+` L${px(pts.length-1)},${H} Z`;
+    return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;" preserveAspectRatio="none">
+      <defs><linearGradient id="dg${color.replace('#','')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${color}" stop-opacity=".15"/><stop offset="100%" stop-color="${color}" stop-opacity="0"/></linearGradient></defs>
+      <path d="${fill}" fill="url(#dg${color.replace('#','')})"/>
+      <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+  }
+
+  const escrowPts = [0,0,0,1200,2400,3800,3800,5200,6800,6800];
+  const bookingPts = [0,0,0,0,1,1,1,2,2,3];
+
+  return `
+  <div class="ph"><div><h1 class="ph-title">Dashboard</h1><p class="ph-sub">Overview of platform activity and key metrics</p></div></div>
+
+  <div class="dash-stats">
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#dbeafe;"><svg fill="none" stroke="#3b82f6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div><div class="dash-stat-val">3</div><div class="dash-stat-lbl">Total Bookings</div></div></div>
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#d1fae5;"><svg fill="none" stroke="#10b981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><div><div class="dash-stat-val">1</div><div class="dash-stat-lbl">Active Bookings</div></div></div>
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#fef3c7;"><svg fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><div class="dash-stat-val">1</div><div class="dash-stat-lbl">Pending Approvals</div></div></div>
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#dbeafe;"><svg fill="none" stroke="#3b82f6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div><div><div class="dash-stat-val">5</div><div class="dash-stat-lbl">Total Streamers</div></div></div>
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#d1fae5;"><svg fill="none" stroke="#10b981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div><div class="dash-stat-val">2</div><div class="dash-stat-lbl">Total Affiliates</div></div></div>
+    <div class="dash-stat"><div class="dash-stat-icon" style="background:#ede9fe;"><svg fill="none" stroke="#7c3aed" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div><div><div class="dash-stat-val">$6,800</div><div class="dash-stat-lbl">My Escrow</div></div></div>
+  </div>
+
+  <div class="dash-two-col" style="margin-top:18px;">
+    <div class="dash-card">
+      <h3 class="dash-card-title" style="margin-bottom:4px;">Escrow Overview</h3>
+      <p style="font-size:12px;color:var(--hog-text-muted);margin-bottom:12px;">Track the total funds held in escrow across all active bookings</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+        <button class="lf-chip lf-active" onclick="this.closest('.dash-card').querySelectorAll('.lf-chip').forEach(b=>b.classList.remove('lf-active'));this.classList.add('lf-active')">All</button>
+        ${[{l:'Funded',c:'#10b981'},{l:'Locked',c:'#f59e0b'},{l:'On Hold',c:'#ef4444'},{l:'Released',c:'#3b82f6'},{l:'Refunded',c:'#8b5cf6'}].map(s=>`<button class="lf-chip" onclick="this.closest('.dash-card').querySelectorAll('.lf-chip').forEach(b=>b.classList.remove('lf-active'));this.classList.add('lf-active')"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${s.c};margin-right:4px;"></span>${s.l}</button>`).join('')}
+      </div>
+      <div style="border:1px solid var(--hog-warm-border);border-radius:8px;overflow:hidden;padding:12px 12px 4px;">
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--hog-text-light);padding:0 2px 4px;">
+          <span>10K</span></div>
+        ${miniChart(escrowPts,'#3b82f6',180)}
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--hog-text-light);padding:4px 2px 0;">
+          ${['03-09','03-10','03-11','03-12','03-13','03-14','03-15','03-16','03-17','03-18'].map(d=>`<span>${d}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="dash-card">
+      <h3 class="dash-card-title" style="margin-bottom:4px;">Recent Bookings</h3>
+      <p style="font-size:12px;color:var(--hog-text-muted);margin-bottom:12px;">Latest bookings for your campaigns</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+        <button class="lf-chip lf-active" onclick="this.closest('.dash-card').querySelectorAll('.lf-chip').forEach(b=>b.classList.remove('lf-active'));this.classList.add('lf-active')">All</button>
+        ${[{l:'Sent',c:'#6b7280'},{l:'Accepted',c:'#10b981'},{l:'Declined',c:'#ef4444'},{l:'Active',c:'#10b981'},{l:'Delivered',c:'#3b82f6'},{l:'Approved',c:'#10b981'}].map(s=>`<button class="lf-chip" onclick="this.closest('.dash-card').querySelectorAll('.lf-chip').forEach(b=>b.classList.remove('lf-active'));this.classList.add('lf-active')"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${s.c};margin-right:4px;"></span>${s.l}</button>`).join('')}
+      </div>
+      <div style="border:1px solid var(--hog-warm-border);border-radius:8px;overflow:hidden;padding:12px 12px 4px;">
+        ${miniChart(bookingPts,'#10b981',180)}
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--hog-text-light);padding:4px 2px 0;">
+          ${['03-09','03-10','03-11','03-12','03-13','03-14','03-15','03-16','03-17','03-18'].map(d=>`<span>${d}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+function buildStreamersPage(){
+  const streamers=[
+    {name:'xQc',game:'Slots / Casino',viewers:'142K avg',geos:['🇺🇸','🇨🇦'],rate:'$8,500/stream',status:'Available'},
+    {name:'Roshtein',game:'Casino Slots',viewers:'48K avg',geos:['🇸🇪','🇩🇪','🇫🇮'],rate:'$4,200/stream',status:'Available'},
+    {name:'ClassyBeef',game:'Live Casino',viewers:'22K avg',geos:['🇬🇧','🇮🇪'],rate:'$2,800/stream',status:'Busy'},
+    {name:'Trainwreckstv',game:'Slots',viewers:'89K avg',geos:['🇺🇸'],rate:'$12,000/stream',status:'Available'},
+    {name:'AyeZee',game:'Slots / Table',viewers:'31K avg',geos:['🇸🇪','🇩🇪'],rate:'$3,100/stream',status:'Available'},
+  ];
+  const rows = streamers.map(s=>`<tr><td style="font-weight:600;">${s.name}</td><td>${s.game}</td><td>${s.viewers}</td><td>${s.geos.join(' ')}</td><td>${s.rate}</td><td><span class="status-badge ${s.status==='Available'?'status-approved':'status-outreach'}">${s.status}</span></td><td><button class="act act-mg" style="font-size:11px;padding:5px 10px;" onclick="toast('Booking: ${s.name}')">Book</button></td></tr>`).join('');
+  return `<div class="ph"><div><h1 class="ph-title">Browse Streamers</h1><p class="ph-sub">Connect with streamers for your campaigns</p></div></div>
+  <div class="list-table-wrap" style="margin-top:14px;"><table class="list-table">
+    <thead><tr><th>Streamer</th><th>Game Focus</th><th>Avg Viewers</th><th>GEOs</th><th>Rate</th><th>Status</th><th></th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
+}
+function buildBookingsPage(){
+  const bookings=[
+    {id:'BK-001',streamer:'xQc',date:'25 Mar 2026',duration:'3h',geos:['🇺🇸','🇨🇦'],rate:'$8,500',status:'Active',escrow:'Funded'},
+    {id:'BK-002',streamer:'AyeZee',date:'28 Mar 2026',duration:'2h',geos:['🇸🇪','🇩🇪'],rate:'$3,100',status:'Pending',escrow:'Locked'},
+    {id:'BK-003',streamer:'Roshtein',date:'01 Apr 2026',duration:'4h',geos:['🇸🇪','🇩🇪','🇫🇮'],rate:'$4,200',status:'Planned',escrow:'On Hold'},
+  ];
+  const statusMap={Active:'status-approved',Pending:'status-pending',Planned:'status-outreach'};
+  const rows=bookings.map(b=>`<tr><td style="font-weight:700;color:var(--hog-coral-dark);">${b.id}</td><td style="font-weight:600;">${b.streamer}</td><td>${b.date}</td><td>${b.duration}</td><td>${b.geos.join(' ')}</td><td style="font-weight:600;">${b.rate}</td><td><span class="status-badge ${statusMap[b.status]||''}">${b.status}</span></td><td style="color:var(--hog-text-muted);">${b.escrow}</td></tr>`).join('');
+  return `<div class="ph"><div><h1 class="ph-title">Bookings</h1><p class="ph-sub">Manage your streamer bookings and escrow</p></div><button class="btn-outline" onclick="toast('New booking flow coming soon')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>New Booking</button></div>
+  <div class="list-table-wrap" style="margin-top:14px;"><table class="list-table">
+    <thead><tr><th>ID</th><th>Streamer</th><th>Date</th><th>Duration</th><th>GEOs</th><th>Rate</th><th>Status</th><th>Escrow</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
+}
+function buildDisputesPage(){
+  const disputes=[
+    {id:'DIS-001',booking:'BK-001',streamer:'xQc',issue:'Stream ended early — 45min short',amount:'$1,700',status:'In Review',created:'17 Mar'},
+    {id:'DIS-002',booking:'BK-002',streamer:'AyeZee',issue:'Incorrect brand placement during stream',amount:'$3,100',status:'Resolved',created:'14 Mar'},
+  ];
+  const statusMap={'In Review':'status-pending','Resolved':'status-approved','Declined':'status-declined'};
+  const rows=disputes.map(d=>`<tr><td style="font-weight:700;color:var(--hog-coral-dark);">${d.id}</td><td>${d.booking}</td><td style="font-weight:600;">${d.streamer}</td><td style="font-size:12px;max-width:180px;">${d.issue}</td><td style="font-weight:600;">${d.amount}</td><td><span class="status-badge ${statusMap[d.status]||''}">${d.status}</span></td><td style="color:var(--hog-text-muted);">${d.created}</td></tr>`).join('');
+  return `<div class="ph"><div><h1 class="ph-title">Disputes</h1><p class="ph-sub">View and manage disputes you have submitted</p></div></div>
+  <div class="list-table-wrap" style="margin-top:14px;"><table class="list-table">
+    <thead><tr><th>ID</th><th>Booking</th><th>Streamer</th><th>Issue</th><th>Amount</th><th>Status</th><th>Created</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
+}
+function buildCampaignsPage(){
+  const campaigns=[
+    {id:'CAM-001',name:'Q1 DE SEO Push',affiliate:'GIG',sources:['askgamblers.com'],geos:['🇩🇪'],budget:'$15,000',status:'Active',start:'01 Apr'},
+    {id:'CAM-002',name:'FI + CA Casino Launch',affiliate:'GIG',sources:['askgamblers.com','casinotopsonline.com'],geos:['🇫🇮','🇨🇦'],budget:'$22,000',status:'Planned',start:'15 Apr'},
+    {id:'CAM-003',name:'UK Review Campaign',affiliate:'Catena',sources:['casino.guru'],geos:['🇬🇧'],budget:'$9,500',status:'Completed',start:'01 Mar'},
+  ];
+  const statusMap={Active:'status-approved',Planned:'status-outreach',Completed:'status-group'};
+  const rows=campaigns.map(c=>`<tr><td style="font-weight:700;color:var(--hog-coral-dark);">${c.id}</td><td style="font-weight:600;">${c.name}</td><td>${c.affiliate}</td><td style="font-size:12px;">${c.sources.length===1?c.sources[0]:c.sources.length+' sources'}</td><td>${c.geos.join(' ')}</td><td style="font-weight:600;">${c.budget}</td><td><span class="status-badge ${statusMap[c.status]||''}">${c.status}</span></td><td style="color:var(--hog-text-muted);">${c.start}</td></tr>`).join('');
+  return `<div class="ph"><div><h1 class="ph-title">Campaign Tools</h1><p class="ph-sub">Manage your campaign assets and strategy</p></div><button class="btn-outline" onclick="toast('New campaign flow coming soon')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>New Campaign</button></div>
+  <div class="list-table-wrap" style="margin-top:14px;"><table class="list-table">
+    <thead><tr><th>ID</th><th>Campaign</th><th>Affiliate</th><th>Sources</th><th>GEOs</th><th>Budget</th><th>Status</th><th>Start</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
+}
+// ═══ SIDEBAR TOGGLE ═══
+function toggleSB(btn){ btn.classList.toggle('collapsed'); btn.nextElementSibling.classList.toggle('hidden'); }
 
 // ═══ MOB MENU ═══
 function toggleMobMenu(){
@@ -1444,7 +1767,6 @@ function toggleMobMenu(){
   const isOpen=sb.classList.toggle('mob-open');
   if(hb) hb.classList.toggle('is-open');
   if(ov) ov.classList.toggle('open');
-  /* body scroll lock removed - not needed with fixed layout */
 }
 function closeMobMenu(){
   const sb=document.querySelector('.sidebar');
@@ -1453,40 +1775,251 @@ function closeMobMenu(){
   if(sb) sb.classList.remove('mob-open');
   if(hb) hb.classList.remove('is-open');
   if(ov) ov.classList.remove('open');
-  
 }
 
 // ═══ GEO NAMES ═══
-function geoName(f){
-  const m={'🇩🇪':'Germany','🇨🇭':'Switzerland','🇨🇦':'Canada','🇬🇧':'United Kingdom','🇦🇺':'Australia','🇺🇸':'United States','🇫🇮':'Finland','🇸🇪':'Sweden','🇨🇾':'Cyprus','🇳🇿':'New Zealand','🇦🇹':'Austria','🇮🇳':'India','🇮🇪':'Ireland'};
-  return m[f]||f;
-}
+function geoName(f){ const m={'🇩🇪':'Germany','🇨🇭':'Switzerland','🇨🇦':'Canada','🇬🇧':'United Kingdom','🇦🇺':'Australia','🇺🇸':'United States','🇫🇮':'Finland','🇸🇪':'Sweden','🇨🇾':'Cyprus','🇳🇿':'New Zealand','🇦🇹':'Austria','🇮🇳':'India','🇮🇪':'Ireland'}; return m[f]||f; }
 
 // ═══ TOAST ═══
 let _t;
-function toast(msg){
-  let el=document.getElementById('_toast');
-  if(!el){el=document.createElement('div');el.id='_toast';el.style.cssText='position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(16px);z-index:999;background:#0f172b;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:9999px;box-shadow:0 6px 20px rgba(0,0,0,.2);opacity:0;transition:opacity .18s,transform .18s;pointer-events:none;white-space:nowrap;';document.body.appendChild(el);}
-  el.textContent=msg;el.style.opacity='1';el.style.transform='translateX(-50%) translateY(0)';
-  clearTimeout(_t);_t=setTimeout(()=>{el.style.opacity='0';el.style.transform='translateX(-50%) translateY(16px)';},2000);
-}
+function toast(msg){ let el=document.getElementById('_toast'); if(!el){el=document.createElement('div');el.id='_toast';el.style.cssText='position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(16px);z-index:999;background:#0f172b;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:9999px;box-shadow:0 6px 20px rgba(0,0,0,.2);opacity:0;transition:opacity .18s,transform .18s;pointer-events:none;white-space:nowrap;';document.body.appendChild(el);} el.textContent=msg;el.style.opacity='1';el.style.transform='translateX(-50%) translateY(0)'; clearTimeout(_t);_t=setTimeout(()=>{el.style.opacity='0';el.style.transform='translateX(-50%) translateY(16px)';},2000); }
 
 // ═══ INIT ═══
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeMobMenu(); });
-function init(){
-  var pc = document.getElementById('pageContent');
-  if(pc){ renderPage('affiliates'); }
-  else { document.addEventListener('DOMContentLoaded', function(){ renderPage('affiliates'); }); }
-}
 if(document.readyState === 'loading'){
   document.addEventListener('DOMContentLoaded', function(){ renderPage('affiliates'); });
 } else {
   renderPage('affiliates');
 }
-</script>
+
+
+
+</script>E html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE H.O.G Booking Platform</title>
+
+
+</head>
+<body>
+<div class="app">
+<div class="app-bg">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-logo-icon"><img src="data:image/png;base64,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" alt="THE H.O.G"></div>
+    <div class="sb-logo-text">
+      <span class="sb-logo-sub">The</span>
+      <span class="sb-logo-main">H.O.G</span>
+    </div>
+  </div>
+  <nav class="sb-nav"><ul>
+    <li class="sb-group">
+      <button class="sb-group-btn" onclick="toggleSB(this)">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        <span style="flex:1">Overview</span><span class="sb-chev"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+      </button>
+      <ul class="sb-sub">
+        <li><button class="sb-link" onclick="nav('dashboard')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</button></li>
+      </ul>
+    </li>
+    <li class="sb-group">
+      <button class="sb-group-btn" onclick="toggleSB(this)">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+        <span style="flex:1">Discovery</span><span class="sb-chev"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+      </button>
+      <ul class="sb-sub">
+        <li><button class="sb-link" onclick="nav('streamers')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>Browse Streamers</button></li>
+        <li><button class="sb-link active" id="sb-affiliates" onclick="nav('affiliates')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>Affiliates<span class="sb-badge">1</span></button></li>
+        <li><button class="sb-link" id="sb-requests" onclick="nav('requests')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"/></svg>Requests<span class="sb-badge">5</span></button></li>
+        <li><button class="sb-link" id="sb-deals" onclick="nav('deals')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 0 1 21.75 8.25Z"/></svg>Deals</button></li>
+      </ul>
+    </li>
+    <li class="sb-group">
+      <button class="sb-group-btn" onclick="toggleSB(this)">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        <span style="flex:1">Growth</span><span class="sb-chev"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+      </button>
+      <ul class="sb-sub">
+        <li><button class="sb-link" onclick="nav('bookings')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Bookings</button></li>
+        <li><button class="sb-link" onclick="nav('disputes')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>Disputes</button></li>
+        <li><button class="sb-link" onclick="nav('campaigns')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>Campaign Tools</button></li>
+      </ul>
+    </li>
+    <li style="padding-top:8px;">
+      <div class="tier-card">
+        <div class="tier-hd"><div class="tier-ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div><div><p class="tier-nm">Tier</p><p class="tier-sb">Aff Tester</p></div></div>
+        <p class="tier-price">$1/mo · min. 3 months</p>
+        <div class="tier-r dt"><p class="tier-lbl">Term</p><p class="tier-val">01/04/2026 – 01/07/2026</p></div>
+        <div class="tier-r"><p class="tier-lbl">Intro Requests</p><p class="tier-val">1/30 · min<em> · 10/month</em></p></div>
+        <div class="tier-r"><p class="tier-lbl">Introduced Sources</p><p class="tier-val">1/6 · min<em> · 2/month</em></p></div>
+        <div class="tier-r"><p class="tier-lbl">Introduced Affiliates</p><p class="tier-val">1/3 · min<em> · 1/month</em></p></div>
+        <div class="tier-r"><p class="tier-lbl">Active Deals</p><p class="tier-val">0 · 0%</p></div>
+        <div class="upg"><button>Upgrade</button></div>
+      </div>
+    </li>
+  </ul></nav>
+  <div class="sb-footer"><a href="javascript:void(0)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>What's new</a></div>
+</aside>
+
+<!-- topbar bg layer -->
+<div class="content-area">
+  <header class="topbar">
+    <div class="topbar-desc">Brand account. Browse and book streamers, manage campaigns, fund escrow, and track delivery.</div>
+    <div class="topbar-right">
+      <button class="av-btn"><div class="av">L</div></button>
+      <span class="welcome">Welcome, Lloyd Slade</span>
+      <button class="ico-btn"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg><span class="notif">1</span></button>
+      <button class="ico-btn"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></button>
+      <button class="mob-hamburger" id="mobHamburger" onclick="toggleMobMenu()">
+        <div class="mob-burger-lines"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+  </header>
+  <main class="main-scroll" id="mainScroll">
+  <div class="page-wrap">
+  <div class="page-card" id="pageContent">
+  <!-- content injected by JS -->
+  </div>
+  </div>
+  </main>
+</div><!-- /content-area -->
+</div><!-- /app-bg -->
+</div><!-- /app -->
+
+<!-- ═══ MODALS ═══ -->
+
+<!-- Traffic Sources Modal -->
+<div class="modal-bg" id="modalTrafficSources">
+  <div class="modal">
+    <div class="modal-hd"><span class="modal-title">Traffic sources</span><button class="modal-close" onclick="closeModal('modalTrafficSources')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+    <div class="modal-body" id="mbTrafficSources"></div>
+    <div class="modal-foot"><button class="btn-close-modal" onclick="closeModal('modalTrafficSources')">Close</button></div>
+  </div>
+</div>
+
+<!-- Source Details Modal -->
+<div class="modal-bg" id="modalSourceDetails">
+  <div class="modal">
+    <div class="modal-hd"><span class="modal-title">Source details</span><button class="modal-close" onclick="closeModal('modalSourceDetails')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+    <div class="modal-body" id="mbSourceDetails"></div>
+    <div class="modal-foot"><button class="btn-close-modal" onclick="closeModal('modalSourceDetails')">Close</button></div>
+  </div>
+</div>
+
+<!-- Primary Verticals Modal -->
+<div class="modal-bg" id="modalVerticals">
+  <div class="modal">
+    <div class="modal-hd"><span class="modal-title">Primary verticals</span><button class="modal-close" onclick="closeModal('modalVerticals')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+    <div class="modal-body" id="mbVerticals"></div>
+    <div class="modal-foot"><button class="btn-close-modal" onclick="closeModal('modalVerticals')">Close</button></div>
+  </div>
+</div>
+
+<!-- Affiliate Details Modal (— button) -->
+<div class="modal-bg" id="modalAffDetails">
+  <div class="modal">
+    <div class="modal-hd">
+      <div style="display:flex;align-items:center;gap:0;">
+        <span class="modal-title">Affiliate details</span>
+        <span class="modal-badge" id="affDetailsBadge">Completed</span>
+      </div>
+      <button class="modal-close" onclick="closeModal('modalAffDetails')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-body" id="mbAffDetails"></div>
+    <div class="modal-foot"><button class="btn-close-modal" onclick="closeModal('modalAffDetails')">Close</button></div>
+  </div>
+</div>
+
+<!-- Request Introduction Modal -->
+<div class="modal-bg" id="modalIntro">
+  <div class="modal wide">
+    <div class="modal-hd"><span class="modal-title">Request Introduction</span><button class="modal-close" onclick="closeModal('modalIntro')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+    <div class="modal-body">
+      <div class="form-field"><div class="form-lbl">Affiliate</div><div class="form-static" id="introAffiliateName">Gaming Innovation Group</div></div>
+      <div class="form-field"><div class="form-lbl">Brand</div><div class="form-static">CLIENTBRAND</div></div>
+      <div class="form-field"><div class="form-lbl">GEO Focus</div><select class="form-select"><option>Germany</option><option>United Kingdom</option><option>Canada</option><option>Switzerland</option><option>Australia</option></select></div>
+      <div class="form-field"><div class="form-lbl">What are you interested in? <span class="opt">(Optional)</span></div></div>
+      <div class="form-field"><div class="form-lbl">Sources <span class="opt">(optional)</span></div>
+        <div class="form-checks">
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">SEO Sites</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">PPC</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Email</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Other</span></label>
+        </div>
+      </div>
+      <div class="form-field"><div class="form-lbl">Specific Sources <span class="opt">(optional)</span></div>
+        <div class="form-checks">
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">askgamblers.com</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">casinotopsonline.com</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Google PPC</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Email List</span></label>
+        </div>
+      </div>
+      <div class="form-field"><div class="form-lbl">Additional Support <span class="opt">(optional)</span></div>
+        <div class="form-checks">
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Deal structuring</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Negotiation support</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">Traffic planning</span></label>
+          <label class="form-check"><input type="checkbox"><span class="form-check-lbl">GEO expansion</span></label>
+        </div>
+      </div>
+      <div class="form-field"><div class="form-lbl">Notes <span class="opt">(optional)</span></div><textarea class="form-textarea" placeholder="e.g. Looking to test DE SEO traffic and scale if it works..."></textarea></div>
+    </div>
+    <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('modalIntro')">Cancel</button><button class="btn-submit" onclick="submitIntro()">Submit Request</button></div>
+  </div>
+</div>
+
+<!-- SOURCE DETAIL PANEL -->
+<div class="panel-ov" id="panelOv" onclick="closePanel()"></div>
+<div class="panel" id="panel">
+  <div class="panel-hd">
+    <div class="panel-hd-l">
+      <span class="panel-type" id="panelType">SEO Review Website</span>
+      <span class="panel-title" id="panelTitle">askgamblers.com</span>
+    </div>
+    <div class="panel-hd-r">
+      <button class="panel-intro" id="panelIntroBtn"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>Request Intro</button>
+      <button class="panel-close" onclick="closePanel()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="panel-tabs" id="panelTabs"></div>
+  <div class="panel-body" id="panelBody"></div>
+</div>
+
+
 
 <!-- MOBILE HAMBURGER + OVERLAY -->
 
 <div class="mob-overlay" id="mobOverlay" onclick="closeMobMenu()"></div>
+
+<!-- Manage Affiliate Modal -->
+<div class="modal-bg" id="modalManage">
+  <div class="modal wide">
+    <div class="modal-hd">
+      <span class="modal-title">Manage Affiliate — <span id="manageAffName"></span></span>
+      <button class="modal-close" onclick="closeModal('modalManage')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-field"><div class="form-lbl">Relationship Status</div>
+        <select class="form-select"><option>Active</option><option>Paused</option><option>Pending</option></select></div>
+      <div class="form-field"><div class="form-lbl">Primary Contact</div>
+        <input type="text" class="form-select" placeholder="e.g. John Smith" style="outline:none;"></div>
+      <div class="form-field"><div class="form-lbl">Preferred Deal Type</div>
+        <select class="form-select"><option>CPA</option><option>RevShare</option><option>Hybrid</option><option>Flat Fee</option></select></div>
+      <div class="form-field"><div class="form-lbl">Internal Notes</div>
+        <textarea class="form-textarea" id="manageAffNotes" placeholder="Add internal notes about this affiliate..."></textarea></div>
+      <div class="form-field"><div class="form-lbl">Tags</div>
+        <input type="text" class="form-select" placeholder="e.g. Priority, High Value, EU Focus" style="outline:none;"></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn-cancel" onclick="closeModal('modalManage')">Cancel</button>
+      <button class="btn-submit" onclick="closeModal('modalManage');toast('Affiliate updated ✓')">Save Changes</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
